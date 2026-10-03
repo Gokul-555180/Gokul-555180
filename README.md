@@ -58,15 +58,19 @@ Currently exploring **React, TypeScript, Node.js, PostgreSQL and modern web tech
 ## 🌟 Featured Projects
 
 ### 🔭 Growth-Lens
+
 A web platform focused on helping users understand and track personal growth through a clean and interactive experience.
 
 ### 🩸 Bloodlink
+
 A modern platform focused on connecting blood donors and recipients through a streamlined digital experience.
 
 ### 🧪 Virtual Science Lab
+
 An interactive web-based science laboratory designed to help students explore experiments digitally.
 
 ### 📋 µLearn Checkpoint
+
 A mobile-first attendance and event check-in system designed for fast student registration using barcode scanning and OCR.
 
 ---
@@ -74,12 +78,23 @@ A mobile-first attendance and event check-in system designed for fast student re
 ## 📊 GitHub Statistics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Gokul-555180&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="180"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gokul-555180&layout=compact&theme=tokyonight&hide_border=true" height="180"/>
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=Gokul-555180&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github"
+    height="180"
+    alt="Gokul's GitHub Stats"
+  />
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gokul-555180&layout=compact&theme=tokyonight&hide_border=true"
+    height="180"
+    alt="Gokul's Top Languages"
+  />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Gokul-555180&theme=tokyonight&hide_border=true" />
+  <img
+    src="https://streak-stats.demolab.com/?user=Gokul-555180&theme=tokyonight&hide_border=true"
+    alt="Gokul's GitHub Streak"
+  />
 </p>
 
 ---
@@ -87,15 +102,22 @@ A mobile-first attendance and event check-in system designed for fast student re
 ## 🏆 GitHub Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Gokul-555180&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8" />
+  <img
+    src="https://github-profile-trophy.vercel.app/?username=Gokul-555180&theme=tokyonight&no-frame=true&no-bg=true&row=2&column=6&margin-w=8"
+    alt="Gokul's GitHub Trophies"
+  />
 </p>
 
 ---
 
-## 📈 Contribution Graph
+## 📈 GitHub Contribution Graph
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Gokul-555180&theme=tokyo-night&hide_border=true" />
+  <img
+    src="https://github-readme-activity-graph.vercel.app/graph?username=Gokul-555180&theme=tokyo-night&hide_border=true&area=true"
+    width="100%"
+    alt="Gokul's GitHub Contribution Graph"
+  />
 </p>
 
 ---
@@ -104,7 +126,10 @@ A mobile-first attendance and event check-in system designed for fast student re
 
 <p align="center">
   <a href="https://github.com/Gokul-555180">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+    <img
+      src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+      alt="GitHub"
+    />
   </a>
 </p>
 
