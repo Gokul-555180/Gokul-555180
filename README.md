@@ -75,50 +75,94 @@ A mobile-first attendance and event check-in system designed for fast student re
 
 ---
 
-## 📊 GitHub Statistics
+## 📊 GitHub Overview
 
 <p align="center">
   <img
     src="https://github-readme-stats.vercel.app/api?username=Gokul-555180&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github"
     height="180"
-    alt="Gokul's GitHub Stats"
+    alt="Gokul's GitHub Statistics"
   />
   <img
     src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gokul-555180&layout=compact&theme=tokyonight&hide_border=true"
     height="180"
-    alt="Gokul's Top Languages"
+    alt="Gokul's Most Used Languages"
   />
 </p>
 
 <p align="center">
   <img
     src="https://streak-stats.demolab.com/?user=Gokul-555180&theme=tokyonight&hide_border=true"
-    alt="Gokul's GitHub Streak"
+    alt="Gokul's GitHub Contribution Streak"
   />
 </p>
 
 ---
 
-## 🏆 GitHub Trophies
+## 🎯 Current Focus
 
-<p align="center">
-  <img
-    src="https://github-profile-trophy.vercel.app/?username=Gokul-555180&theme=tokyonight&no-frame=true&no-bg=true&row=2&column=6&margin-w=8"
-    alt="Gokul's GitHub Trophies"
-  />
-</p>
+<table>
+<tr>
+<td width="50%">
+
+### ⚛️ Full-Stack Development
+
+Building modern web applications with:
+
+- React & TypeScript
+- Node.js & Express
+- PostgreSQL & MongoDB
+- REST APIs
+- Authentication & security
+
+</td>
+
+<td width="50%">
+
+### 🎨 Product & UI
+
+Focused on creating:
+
+- Clean interfaces
+- Responsive layouts
+- Smooth interactions
+- Practical user experiences
+- Scalable frontend architecture
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 📈 GitHub Contribution Graph
+## 🛠️ What I'm Building
 
-<p align="center">
-  <img
-    src="https://github-readme-activity-graph.vercel.app/graph?username=Gokul-555180&theme=tokyo-night&hide_border=true&area=true"
-    width="100%"
-    alt="Gokul's GitHub Contribution Graph"
-  />
-</p>
+| Project | Focus | Status |
+| :--- | :--- | :--- |
+| 🩸 **Bloodlink** | Healthcare & donor platform | 🚧 Building |
+| 📋 **µLearn Checkpoint** | Event & attendance management | 🚧 Building |
+| 🧪 **Virtual Science Lab** | Interactive education | 🔬 Exploring |
+| 🔭 **Growth-Lens** | Personal growth platform | 💡 Evolving |
+
+---
+
+## 💡 What I Like Building
+
+```text
+┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│   🚀 Full-Stack Web Applications                        │
+│                                                         │
+│   🎨 Clean & Modern User Interfaces                     │
+│                                                         │
+│   ⚡ Fast, Responsive & Practical Products              │
+│                                                         │
+│   🔐 Secure APIs & Reliable Backend Systems             │
+│                                                         │
+│   🧠 Technology That Solves Real Problems               │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
 
 ---
 
