@@ -41,13 +41,18 @@ Currently exploring **React, TypeScript, Node.js, PostgreSQL and modern web tech
 ### Backend & Database
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
-### Tools
+### AI & Developer Tools
 
+![Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge)
+![FAISS](https://img.shields.io/badge/FAISS-009688?style=for-the-badge)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
@@ -57,9 +62,13 @@ Currently exploring **React, TypeScript, Node.js, PostgreSQL and modern web tech
 
 ## 🌟 Featured Projects
 
-### 🔭 Growth-Lens
+### 🧾 GST Invoice Reconciliation
 
-A web platform focused on helping users understand and track personal growth through a clean and interactive experience.
+An AI-powered invoice reconciliation platform designed to compare **Purchase Orders with GST invoices** and identify discrepancies automatically.
+
+The system combines **LLM-based document extraction, deterministic financial validation, RAG-based knowledge retrieval, and agentic workflows** to make invoice reconciliation more reliable and traceable.
+
+**Tech:** Django • Python • Next.js • React • TypeScript • Tailwind CSS • Gemini • LangGraph • FAISS • MySQL
 
 ### 🩸 Bloodlink
 
@@ -69,9 +78,9 @@ A modern platform focused on connecting blood donors and recipients through a st
 
 An interactive web-based science laboratory designed to help students explore experiments digitally.
 
-### 📋 µLearn Checkpoint
+### 🔭 Growth-Lens
 
-A mobile-first attendance and event check-in system designed for fast student registration using barcode scanning and OCR.
+A web platform focused on helping users understand and track personal growth through a clean and interactive experience.
 
 ---
 
@@ -105,15 +114,16 @@ A mobile-first attendance and event check-in system designed for fast student re
 <tr>
 <td width="50%">
 
-### ⚛️ Full-Stack Development
+### 🤖 AI & Full-Stack Development
 
-Building modern web applications with:
+Building intelligent applications with:
 
 - React & TypeScript
-- Node.js & Express
-- PostgreSQL & MongoDB
+- Django & Python
+- Next.js
 - REST APIs
-- Authentication & security
+- LangGraph & RAG
+- AI-powered workflows
 
 </td>
 
@@ -139,9 +149,9 @@ Focused on creating:
 
 | Project | Focus | Status |
 | :--- | :--- | :--- |
-| 🩸 **Bloodlink** | Healthcare & donor platform | 🚧 Building |
-| 📋 **µLearn Checkpoint** | Event & attendance management | 🚧 Building |
-| 🧪 **Virtual Science Lab** | Interactive education | 🔬 Exploring |
+| 🧾 **GST Invoice Reconciliation** | AI-powered invoice & PO reconciliation | 🚧 Building |
+| 🩸 **Bloodlink** | Blood donor & recipient platform | 🚧 Building |
+| 🧪 **Virtual Science Lab** | Interactive science education | 🔬 Exploring |
 | 🔭 **Growth-Lens** | Personal growth platform | 💡 Evolving |
 
 ---
@@ -150,6 +160,8 @@ Focused on creating:
 
 ```text
 ┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│   🤖 AI-Powered Applications                            │
 │                                                         │
 │   🚀 Full-Stack Web Applications                        │
 │                                                         │
