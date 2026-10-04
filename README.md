@@ -1,28 +1,35 @@
-# Hey, I'm Gokul N. R. 👋
+# Gokul N. R.
 
-### Computer Science & Engineering Student • Full-Stack Developer • UI/UX Enthusiast
+### Computer Science & Engineering Student · Full-Stack Developer · UI/UX Enthusiast
 
-I'm a CSE student who enjoys turning ideas into **useful, polished, and practical software**.
+I like building software that is useful, thoughtfully designed, and actually works.
 
-I like working across the stack — from designing interfaces and building frontend experiences to developing APIs and working with databases.
+My interests sit somewhere between **engineering and product design** — building the frontend, shaping the experience, designing the backend, and figuring out how all the pieces fit together.
 
-Currently exploring **React, TypeScript, Node.js, PostgreSQL and modern web technologies.**
+Currently exploring **React, TypeScript, Node.js, Django, PostgreSQL, AI/LLM systems, and modern web technologies.**
 
----
-
-## 🚀 About Me
-
-- 🎓 Computer Science & Engineering student
-- 💻 Interested in Full-Stack Development
-- 🎨 Passionate about UI/UX and clean interfaces
-- 🧠 Constantly learning and experimenting with new technologies
-- 🛠️ Building projects that solve real-world problems
-- 🌱 Currently improving my React & full-stack development skills
-- ⚡ I enjoy turning ideas into working products
+> *I build things, break things, and then learn why they broke.*
 
 ---
 
-## 🧰 Tech Stack
+## About
+
+I'm a Computer Science & Engineering student interested in turning ideas into real products.
+
+I enjoy working across the stack, but I particularly care about the part where **engineering meets user experience** — making something technically solid without making it unnecessarily complicated to use.
+
+Currently, I'm focused on:
+
+- Full-stack web development
+- AI-powered applications
+- RAG & agentic workflows
+- Modern frontend architecture
+- UI/UX and product design
+- Building practical projects around real-world problems
+
+---
+
+## Tech Stack
 
 ### Languages
 
@@ -60,31 +67,57 @@ Currently exploring **React, TypeScript, Node.js, PostgreSQL and modern web tech
 
 ---
 
-## 🌟 Featured Projects
+## Selected Work
 
-### 🧾 GST Invoice Reconciliation
+### GST Invoice Reconciliation
 
-An AI-powered invoice reconciliation platform designed to compare **Purchase Orders with GST invoices** and identify discrepancies automatically.
+**AI-powered invoice reconciliation for Purchase Orders and GST invoices.**
 
-The system combines **LLM-based document extraction, deterministic financial validation, RAG-based knowledge retrieval, and agentic workflows** to make invoice reconciliation more reliable and traceable.
+A full-stack system designed to automate the comparison of purchase orders and GST invoices while making discrepancies easier to understand and investigate.
 
-**Tech:** Django • Python • Next.js • React • TypeScript • Tailwind CSS • Gemini • LangGraph • FAISS • MySQL
+The platform combines **LLM-based document extraction, deterministic financial validation, RAG-based retrieval, and agentic workflows** rather than relying on an LLM alone. This helps separate probabilistic document understanding from rules that need predictable financial results.
 
-### 🩸 Bloodlink
-
-A modern platform focused on connecting blood donors and recipients through a streamlined digital experience.
-
-### 🧪 Virtual Science Lab
-
-An interactive web-based science laboratory designed to help students explore experiments digitally.
-
-### 🔭 Growth-Lens
-
-A web platform focused on helping users understand and track personal growth through a clean and interactive experience.
+**Stack:** Django · Python · Next.js · React · TypeScript · Tailwind CSS · Gemini · LangGraph · FAISS · MySQL
 
 ---
 
-## 📊 GitHub Overview
+### Bloodlink
+
+**A digital platform for connecting blood donors with people who need blood.**
+
+Bloodlink focuses on making the donor-search process faster and more accessible by bringing discovery, communication, and the surrounding user experience into one platform.
+
+The project also gave me an opportunity to work on a polished frontend while designing the interface around a problem where clarity and speed matter.
+
+**Stack:** Next.js · React · TypeScript · Supabase · Tailwind CSS
+
+---
+
+### Virtual Science Lab
+
+**An interactive web-based laboratory for students.**
+
+Virtual Science Lab is designed to give students a way to explore science experiments digitally through interactive simulations rather than relying entirely on traditional classroom demonstrations.
+
+The project focuses on making educational content more **visual, interactive, and approachable**, particularly for school-level science education.
+
+**Stack:** React · JavaScript · HTML · CSS · Interactive Web Experiences
+
+---
+
+### Growth-Lens
+
+**A personal growth platform built around reflection, progress, and self-improvement.**
+
+Growth-Lens explores how software can turn personal development into something easier to understand and track without making the experience feel like another productivity dashboard.
+
+The project combines a clean interface with a focus on presenting progress in a simple and meaningful way.
+
+**Stack:** React · JavaScript · Tailwind CSS · Modern Web Technologies
+
+---
+
+## GitHub Overview
 
 <p align="center">
   <img
@@ -108,36 +141,33 @@ A web platform focused on helping users understand and track personal growth thr
 
 ---
 
-## 🎯 Current Focus
+## What I'm Exploring
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
-### 🤖 AI & Full-Stack Development
-
-Building intelligent applications with:
+### Engineering
 
 - React & TypeScript
-- Django & Python
-- Next.js
-- REST APIs
-- LangGraph & RAG
-- AI-powered workflows
+- Full-stack architecture
+- Django & REST APIs
+- PostgreSQL & MySQL
+- Authentication & security
+- Scalable frontend systems
 
 </td>
 
-<td width="50%">
+<td width="50%" valign="top">
 
-### 🎨 Product & UI
+### AI & Product
 
-Focused on creating:
-
-- Clean interfaces
-- Responsive layouts
-- Smooth interactions
-- Practical user experiences
-- Scalable frontend architecture
+- RAG systems
+- Agentic workflows
+- LLM application architecture
+- Document intelligence
+- UI/UX
+- Turning technical ideas into usable products
 
 </td>
 </tr>
@@ -145,42 +175,43 @@ Focused on creating:
 
 ---
 
-## 🛠️ What I'm Building
+## Right Now
 
-| Project | Focus | Status |
-| :--- | :--- | :--- |
-| 🧾 **GST Invoice Reconciliation** | AI-powered invoice & PO reconciliation | 🚧 Building |
-| 🩸 **Bloodlink** | Blood donor & recipient platform | 🚧 Building |
-| 🧪 **Virtual Science Lab** | Interactive science education | 🔬 Exploring |
-| 🔭 **Growth-Lens** | Personal growth platform | 💡 Evolving |
+I'm currently spending most of my time building things, experimenting with new technologies, and trying to get better at the parts of software development that don't fit neatly into a tutorial.
 
----
+### Current interests
 
-## 💡 What I Like Building
+`Full-Stack` · `AI Engineering` · `RAG` · `React` · `TypeScript` · `UI/UX`
 
-```text
-┌─────────────────────────────────────────────────────────┐
-│                                                         │
-│   🤖 AI-Powered Applications                            │
-│                                                         │
-│   🚀 Full-Stack Web Applications                        │
-│                                                         │
-│   🎨 Clean & Modern User Interfaces                     │
-│                                                         │
-│   ⚡ Fast, Responsive & Practical Products              │
-│                                                         │
-│   🔐 Secure APIs & Reliable Backend Systems             │
-│                                                         │
-│   🧠 Technology That Solves Real Problems               │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
-```
+And occasionally:
+
+`"Why does this work on my machine?"`
 
 ---
 
-## 🤝 Let's Connect
+## A Few Things About How I Build
 
-<p align="center">
+**01 — Build for the user**
+
+A technically impressive product is still a bad product if nobody enjoys using it.
+
+**02 — Keep the complexity where it belongs**
+
+The interface should feel simple even when the system underneath isn't.
+
+**03 — Automate the boring parts**
+
+If a repetitive task can be handled by software, it probably should be.
+
+**04 — Learn by building**
+
+I learn considerably faster when I'm actually trying to make something work.
+
+---
+
+## Let's Connect
+
+<p align="left">
   <a href="https://github.com/Gokul-555180">
     <img
       src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
@@ -192,5 +223,5 @@ Focused on creating:
 ---
 
 <p align="center">
-  <i>Building. Learning. Experimenting. Repeating. 🚀</i>
+  <sub>Designed, built, broken, fixed, and occasionally shipped by Gokul.</sub>
 </p>
