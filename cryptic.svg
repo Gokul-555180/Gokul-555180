@@ -1,23 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" width="600" height="180">
+
   <defs>
+
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
-      
+
       .terminal-text {
         font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
         font-weight: bold;
         font-size: 55px;
         fill: #00ffcc;
-        text-shadow: 0 0 8px rgba(0, 255, 204, 0.6), 0 0 20px rgba(0, 255, 204, 0.3);
+        text-shadow:
+          0 0 8px rgba(0, 255, 204, 0.6),
+          0 0 20px rgba(0, 255, 204, 0.3);
       }
-      
+
       .matrix-col {
         font-family: 'Share Tech Mono', monospace;
         font-size: 11px;
         fill: #00ff66;
         user-select: none;
       }
-      
+
       .sub-text {
         font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
         font-size: 13px;
@@ -25,211 +29,215 @@
         font-weight: bold;
       }
 
-      /* Matrix fall animations */
-      @keyframes matrix-fall-1 {
-        0% { transform: translateY(-120px); opacity: 0; }
-        10% { opacity: 0.2; }
-        90% { opacity: 0.2; }
-        100% { transform: translateY(180px); opacity: 0; }
-      }
-      
-      @keyframes matrix-fall-2 {
-        0% { transform: translateY(-120px); opacity: 0; }
-        10% { opacity: 0.15; }
-        90% { opacity: 0.15; }
-        100% { transform: translateY(180px); opacity: 0; }
-      }
-
-      .m-col-1 { animation: matrix-fall-1 4.5s infinite linear; }
-      .m-col-2 { animation: matrix-fall-2 3.8s infinite linear; }
-      .m-col-3 { animation: matrix-fall-1 5.2s infinite linear; }
-      .m-col-4 { animation: matrix-fall-2 4.1s infinite linear; }
-
-      /* Scrambler Roll Animations */
-      @keyframes roll-slot-1 {
-        0% { transform: translateY(0); }
-        2% { transform: translateY(-120px); }
-        5% { transform: translateY(-300px); }
-        8% { transform: translateY(-180px); }
-        11% { transform: translateY(-480px); }
-        14% { transform: translateY(-540px); }
-        17% { transform: translateY(-600px); }
-        90% { transform: translateY(-600px); }
-        93% { transform: translateY(-360px); }
-        96% { transform: translateY(-120px); }
-        100% { transform: translateY(0); }
-      }
-
-      @keyframes roll-slot-2 {
-        0% { transform: translateY(0); }
-        3% { transform: translateY(-180px); }
-        6% { transform: translateY(-60px); }
-        10% { transform: translateY(-420px); }
-        14% { transform: translateY(-240px); }
-        18% { transform: translateY(-540px); }
-        22% { transform: translateY(-600px); }
-        90% { transform: translateY(-600px); }
-        94% { transform: translateY(-240px); }
-        98% { transform: translateY(-60px); }
-        100% { transform: translateY(0); }
-      }
-
-      @keyframes roll-slot-3 {
-        0% { transform: translateY(0); }
-        4% { transform: translateY(-240px); }
-        8% { transform: translateY(-120px); }
-        13% { transform: translateY(-480px); }
-        18% { transform: translateY(-300px); }
-        22% { transform: translateY(-540px); }
-        26% { transform: translateY(-600px); }
-        90% { transform: translateY(-600px); }
-        95% { transform: translateY(-180px); }
-        98% { transform: translateY(-120px); }
-        100% { transform: translateY(0); }
-      }
-
-      /* Added only for GOKUL */
-      @keyframes roll-slot-4 {
-        0% { transform: translateY(0); }
-        3% { transform: translateY(-180px); }
-        6% { transform: translateY(-60px); }
-        10% { transform: translateY(-420px); }
-        14% { transform: translateY(-240px); }
-        18% { transform: translateY(-540px); }
-        22% { transform: translateY(-600px); }
-        90% { transform: translateY(-600px); }
-        94% { transform: translateY(-240px); }
-        98% { transform: translateY(-60px); }
-        100% { transform: translateY(0); }
-      }
-
-      @keyframes roll-slot-5 {
-        0% { transform: translateY(0); }
-        4% { transform: translateY(-240px); }
-        8% { transform: translateY(-120px); }
-        13% { transform: translateY(-480px); }
-        18% { transform: translateY(-300px); }
-        22% { transform: translateY(-540px); }
-        26% { transform: translateY(-600px); }
-        90% { transform: translateY(-600px); }
-        95% { transform: translateY(-180px); }
-        98% { transform: translateY(-120px); }
-        100% { transform: translateY(0); }
-      }
-
-      .slot-1 { animation: roll-slot-1 7s infinite cubic-bezier(0.25, 1, 0.5, 1); }
-      .slot-2 { animation: roll-slot-2 7s infinite cubic-bezier(0.25, 1, 0.5, 1); }
-      .slot-3 { animation: roll-slot-3 7s infinite cubic-bezier(0.25, 1, 0.5, 1); }
-      .slot-4 { animation: roll-slot-4 7s infinite cubic-bezier(0.25, 1, 0.5, 1); }
-      .slot-5 { animation: roll-slot-5 7s infinite cubic-bezier(0.25, 1, 0.5, 1); }
-
-      /* Blinking Cursor */
-      @keyframes blink {
-        0%, 49% { opacity: 1; }
-        50%, 99% { opacity: 0; }
-      }
-      
-      .cursor {
-        animation: blink 0.8s infinite;
-        fill: #00ffcc;
-        filter: drop-shadow(0 0 4px rgba(0,255,204,0.6));
-      }
-
-      /* Subtitle animations */
-      @keyframes sub-decipher {
-        0%, 25% { opacity: 1; }
-        26%, 100% { opacity: 0; }
-      }
-      
-      @keyframes sub-online {
-        0%, 25% { opacity: 0; }
-        26%, 90% { opacity: 1; }
-        91%, 100% { opacity: 0; }
-      }
-      
       .sub-loading {
         fill: #ff3366;
         text-shadow: 0 0 5px rgba(255, 51, 102, 0.6);
-        animation: sub-decipher 7s infinite;
       }
-      
+
       .sub-ready {
         fill: #00ffcc;
         text-shadow: 0 0 5px rgba(0, 255, 204, 0.6);
-        animation: sub-online 7s infinite;
       }
 
-      /* Scanline overlay pattern */
       .scanlines {
         fill: url(#scanline-pattern);
         opacity: 0.08;
         pointer-events: none;
       }
     </style>
-    
-    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#161b22" stroke-width="1"/>
+
+    <pattern
+      id="grid"
+      width="20"
+      height="20"
+      patternUnits="userSpaceOnUse">
+      <path
+        d="M 20 0 L 0 0 0 20"
+        fill="none"
+        stroke="#161b22"
+        stroke-width="1"/>
     </pattern>
 
-    <pattern id="scanline-pattern" width="100" height="4" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="100" y2="0" stroke="#000" stroke-width="2" />
+    <pattern
+      id="scanline-pattern"
+      width="100"
+      height="4"
+      patternUnits="userSpaceOnUse">
+      <line
+        x1="0"
+        y1="0"
+        x2="100"
+        y2="0"
+        stroke="#000"
+        stroke-width="2"/>
     </pattern>
-    
+
     <clipPath id="text-clip">
-      <rect x="0" y="38" width="600" height="64" />
+      <rect
+        x="0"
+        y="38"
+        width="600"
+        height="64"/>
     </clipPath>
+
   </defs>
 
-  <!-- Background Base -->
-  <rect width="100%" height="100%" fill="#0a0b10" rx="10" />
-  <rect width="100%" height="100%" fill="url(#grid)" rx="10" />
 
-  <!-- Falling Matrix Code (Background layer) -->
+  <!-- ========================================================= -->
+  <!-- Background -->
+  <!-- ========================================================= -->
+
+  <rect
+    width="100%"
+    height="100%"
+    fill="#0a0b10"
+    rx="10"/>
+
+  <rect
+    width="100%"
+    height="100%"
+    fill="url(#grid)"
+    rx="10"/>
+
+
+  <!-- ========================================================= -->
+  <!-- Falling Matrix Code -->
+  <!-- ========================================================= -->
+
   <g opacity="0.4">
 
-    <!-- Col 1 -->
-    <text x="40" y="0" class="matrix-col m-col-1">
+    <!-- Column 1 -->
+    <text
+      x="40"
+      y="0"
+      class="matrix-col">
+
       <tspan x="40" dy="15">▩</tspan>
       <tspan x="40" dy="15">1</tspan>
       <tspan x="40" dy="15">0</tspan>
       <tspan x="40" dy="15">▚</tspan>
       <tspan x="40" dy="15">Ø</tspan>
       <tspan x="40" dy="15">Σ</tspan>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0 -120; 0 180"
+        dur="4.5s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="opacity"
+        values="0;0.2;0.2;0"
+        keyTimes="0;0.1;0.9;1"
+        dur="4.5s"
+        repeatCount="indefinite"/>
+
     </text>
 
-    <!-- Col 2 -->
-    <text x="140" y="0" class="matrix-col m-col-2" style="animation-delay: 1.5s;">
+
+    <!-- Column 2 -->
+    <text
+      x="140"
+      y="0"
+      class="matrix-col">
+
       <tspan x="140" dy="15">█</tspan>
       <tspan x="140" dy="15">7</tspan>
       <tspan x="140" dy="15">▩</tspan>
       <tspan x="140" dy="15">æ</tspan>
       <tspan x="140" dy="15">1</tspan>
       <tspan x="140" dy="15">0</tspan>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0 -120; 0 180"
+        dur="3.8s"
+        begin="1.5s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="opacity"
+        values="0;0.15;0.15;0"
+        keyTimes="0;0.1;0.9;1"
+        dur="3.8s"
+        begin="1.5s"
+        repeatCount="indefinite"/>
+
     </text>
 
-    <!-- Col 3 -->
-    <text x="460" y="0" class="matrix-col m-col-3" style="animation-delay: 0.8s;">
+
+    <!-- Column 3 -->
+    <text
+      x="460"
+      y="0"
+      class="matrix-col">
+
       <tspan x="460" dy="15">▞</tspan>
       <tspan x="460" dy="15">0</tspan>
       <tspan x="460" dy="15">μ</tspan>
       <tspan x="460" dy="15">1</tspan>
       <tspan x="460" dy="15">λ</tspan>
       <tspan x="460" dy="15">▩</tspan>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0 -120; 0 180"
+        dur="5.2s"
+        begin="0.8s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="opacity"
+        values="0;0.2;0.2;0"
+        keyTimes="0;0.1;0.9;1"
+        dur="5.2s"
+        begin="0.8s"
+        repeatCount="indefinite"/>
+
     </text>
 
-    <!-- Col 4 -->
-    <text x="540" y="0" class="matrix-col m-col-4" style="animation-delay: 2.2s;">
+
+    <!-- Column 4 -->
+    <text
+      x="540"
+      y="0"
+      class="matrix-col">
+
       <tspan x="540" dy="15">1</tspan>
       <tspan x="540" dy="15">0</tspan>
       <tspan x="540" dy="15">π</tspan>
       <tspan x="540" dy="15">▚</tspan>
       <tspan x="540" dy="15">θ</tspan>
       <tspan x="540" dy="15">█</tspan>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0 -120; 0 180"
+        dur="4.1s"
+        begin="2.2s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="opacity"
+        values="0;0.15;0.15;0"
+        keyTimes="0;0.1;0.9;1"
+        dur="4.1s"
+        begin="2.2s"
+        repeatCount="indefinite"/>
+
     </text>
 
   </g>
 
-  <!-- Cyber Border & Panels -->
+
+  <!-- ========================================================= -->
+  <!-- Cyber Border -->
+  <!-- ========================================================= -->
+
   <rect
     x="10"
     y="10"
@@ -238,42 +246,53 @@
     rx="8"
     fill="none"
     stroke="#1f2438"
-    stroke-width="1.5" />
+    stroke-width="1.5"/>
 
-  <!-- Neon corner highlights -->
+
+  <!-- Neon corners -->
+
   <path
     d="M 10 35 L 10 10 L 35 10"
     fill="none"
     stroke="#00ffcc"
     stroke-width="2.5"
-    stroke-linecap="round" />
+    stroke-linecap="round"/>
 
   <path
     d="M 590 35 L 590 10 L 565 10"
     fill="none"
     stroke="#00ffcc"
     stroke-width="2.5"
-    stroke-linecap="round" />
+    stroke-linecap="round"/>
 
   <path
     d="M 10 145 L 10 170 L 35 170"
     fill="none"
     stroke="#00ffcc"
     stroke-width="2.5"
-    stroke-linecap="round" />
+    stroke-linecap="round"/>
 
   <path
     d="M 590 145 L 590 170 L 565 170"
     fill="none"
     stroke="#00ffcc"
     stroke-width="2.5"
-    stroke-linecap="round" />
+    stroke-linecap="round"/>
 
-  <!-- Deciphering Terminal Text -->
+
+  <!-- ========================================================= -->
+  <!-- GOKUL Terminal Text -->
+  <!-- ========================================================= -->
+
   <g clip-path="url(#text-clip)">
 
-    <!-- Slot 1 (G) -->
-    <g class="slot-1">
+
+    <!-- ======================================================= -->
+    <!-- G -->
+    <!-- ======================================================= -->
+
+    <g>
+
       <text x="195" y="86" class="terminal-text">_</text>
       <text x="195" y="146" class="terminal-text">0</text>
       <text x="195" y="206" class="terminal-text">1</text>
@@ -285,10 +304,46 @@
       <text x="195" y="566" class="terminal-text">β</text>
       <text x="195" y="626" class="terminal-text">æ</text>
       <text x="195" y="686" class="terminal-text">G</text>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          0 -120;
+          0 -300;
+          0 -180;
+          0 -480;
+          0 -540;
+          0 -600;
+          0 -600;
+          0 -360;
+          0 -120;
+          0 0"
+        keyTimes="
+          0;
+          0.02;
+          0.05;
+          0.08;
+          0.11;
+          0.14;
+          0.17;
+          0.90;
+          0.93;
+          0.96;
+          1"
+        dur="7s"
+        repeatCount="indefinite"/>
+
     </g>
 
-    <!-- Slot 2 (O) -->
-    <g class="slot-2">
+
+    <!-- ======================================================= -->
+    <!-- O -->
+    <!-- ======================================================= -->
+
+    <g>
+
       <text x="245" y="86" class="terminal-text">_</text>
       <text x="245" y="146" class="terminal-text">1</text>
       <text x="245" y="206" class="terminal-text">0</text>
@@ -300,10 +355,46 @@
       <text x="245" y="566" class="terminal-text">λ</text>
       <text x="245" y="626" class="terminal-text">œ</text>
       <text x="245" y="686" class="terminal-text">O</text>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          0 -180;
+          0 -60;
+          0 -420;
+          0 -240;
+          0 -540;
+          0 -600;
+          0 -600;
+          0 -240;
+          0 -60;
+          0 0"
+        keyTimes="
+          0;
+          0.03;
+          0.06;
+          0.10;
+          0.14;
+          0.18;
+          0.22;
+          0.90;
+          0.94;
+          0.98;
+          1"
+        dur="7s"
+        repeatCount="indefinite"/>
+
     </g>
 
-    <!-- Slot 3 (K) -->
-    <g class="slot-3">
+
+    <!-- ======================================================= -->
+    <!-- K -->
+    <!-- ======================================================= -->
+
+    <g>
+
       <text x="295" y="86" class="terminal-text">_</text>
       <text x="295" y="146" class="terminal-text">0</text>
       <text x="295" y="206" class="terminal-text">1</text>
@@ -315,10 +406,46 @@
       <text x="295" y="566" class="terminal-text">θ</text>
       <text x="295" y="626" class="terminal-text">ÿ</text>
       <text x="295" y="686" class="terminal-text">K</text>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          0 -240;
+          0 -120;
+          0 -480;
+          0 -300;
+          0 -540;
+          0 -600;
+          0 -600;
+          0 -180;
+          0 -120;
+          0 0"
+        keyTimes="
+          0;
+          0.04;
+          0.08;
+          0.13;
+          0.18;
+          0.22;
+          0.26;
+          0.90;
+          0.95;
+          0.98;
+          1"
+        dur="7s"
+        repeatCount="indefinite"/>
+
     </g>
 
-    <!-- Slot 4 (U) -->
-    <g class="slot-4">
+
+    <!-- ======================================================= -->
+    <!-- U -->
+    <!-- ======================================================= -->
+
+    <g>
+
       <text x="345" y="86" class="terminal-text">_</text>
       <text x="345" y="146" class="terminal-text">1</text>
       <text x="345" y="206" class="terminal-text">0</text>
@@ -330,10 +457,46 @@
       <text x="345" y="566" class="terminal-text">λ</text>
       <text x="345" y="626" class="terminal-text">Ω</text>
       <text x="345" y="686" class="terminal-text">U</text>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          0 -180;
+          0 -60;
+          0 -420;
+          0 -240;
+          0 -540;
+          0 -600;
+          0 -600;
+          0 -240;
+          0 -60;
+          0 0"
+        keyTimes="
+          0;
+          0.03;
+          0.06;
+          0.10;
+          0.14;
+          0.18;
+          0.22;
+          0.90;
+          0.94;
+          0.98;
+          1"
+        dur="7s"
+        repeatCount="indefinite"/>
+
     </g>
 
-    <!-- Slot 5 (L) -->
-    <g class="slot-5">
+
+    <!-- ======================================================= -->
+    <!-- L -->
+    <!-- ======================================================= -->
+
+    <g>
+
       <text x="395" y="86" class="terminal-text">_</text>
       <text x="395" y="146" class="terminal-text">0</text>
       <text x="395" y="206" class="terminal-text">1</text>
@@ -345,36 +508,108 @@
       <text x="395" y="566" class="terminal-text">β</text>
       <text x="395" y="626" class="terminal-text">æ</text>
       <text x="395" y="686" class="terminal-text">L</text>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          0 -240;
+          0 -120;
+          0 -480;
+          0 -300;
+          0 -540;
+          0 -600;
+          0 -600;
+          0 -180;
+          0 -120;
+          0 0"
+        keyTimes="
+          0;
+          0.04;
+          0.08;
+          0.13;
+          0.18;
+          0.22;
+          0.26;
+          0.90;
+          0.95;
+          0.98;
+          1"
+        dur="7s"
+        repeatCount="indefinite"/>
+
     </g>
 
   </g>
 
+
+  <!-- ========================================================= -->
   <!-- Blinking Cursor -->
+  <!-- ========================================================= -->
+
   <rect
     x="445"
     y="48"
     width="16"
     height="42"
-    class="cursor" />
+    fill="#00ffcc"
+    filter="drop-shadow(0 0 4px rgba(0,255,204,0.6))">
 
-  <!-- Subtitle Area -->
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0"
+      keyTimes="0;0.49;0.50;0.99"
+      dur="0.8s"
+      repeatCount="indefinite"/>
+
+  </rect>
+
+
+  <!-- ========================================================= -->
+  <!-- Subtitle -->
+  <!-- ========================================================= -->
+
   <text
-    x="300"
+    x="315"
     y="132"
     text-anchor="middle"
     class="sub-text sub-loading">
+
     [ INITIALIZING_PROFILE... ]
+
+    <animate
+      attributeName="opacity"
+      values="1;1;0;0"
+      keyTimes="0;0.25;0.26;1"
+      dur="7s"
+      repeatCount="indefinite"/>
+
   </text>
 
+
   <text
-    x="300"
+    x="315"
     y="132"
     text-anchor="middle"
     class="sub-text sub-ready">
+
     [ FULL-STACK DEVELOPMENT &amp; AI ]
+
+    <animate
+      attributeName="opacity"
+      values="0;0;1;1;0"
+      keyTimes="0;0.25;0.26;0.90;1"
+      dur="7s"
+      repeatCount="indefinite"/>
+
   </text>
 
-  <!-- Decorative horizontal rule -->
+
+  <!-- ========================================================= -->
+  <!-- Decorative Horizontal Rule -->
+  <!-- ========================================================= -->
+
   <line
     x1="150"
     y1="145"
@@ -382,13 +617,17 @@
     y2="145"
     stroke="#1f2438"
     stroke-dasharray="5,5"
-    stroke-width="1" />
+    stroke-width="1"/>
 
-  <!-- Overlay scanlines -->
+
+  <!-- ========================================================= -->
+  <!-- Scanlines -->
+  <!-- ========================================================= -->
+
   <rect
     width="100%"
     height="100%"
     class="scanlines"
-    rx="10" />
+    rx="10"/>
 
 </svg>
