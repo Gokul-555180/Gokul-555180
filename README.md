@@ -1,3 +1,7 @@
+<!-- ========================================================= -->
+<!--                         HERO                              -->
+<!-- ========================================================= -->
+
 <p align="center">
   <img
     src="./cryptic.svg"
@@ -6,9 +10,49 @@
   />
 </p>
 
+<br>
+
+<p align="center">
+  <a href="https://github.com/Gokul-555180">
+    <img src="https://img.shields.io/github/followers/Gokul-555180?label=Followers&style=flat-square&logo=github&logoColor=white&color=0f172a" />
+  </a>
+  <a href="https://github.com/Gokul-555180?tab=repositories">
+    <img src="https://img.shields.io/github/stars/Gokul-555180?label=Stars&style=flat-square&logo=github&logoColor=white&color=0f172a" />
+  </a>
+  <img src="https://komarev.com/ghpvc/?username=Gokul-555180&style=flat-square&color=0f172a&label=Profile+Views" />
+</p>
+
+<br>
+
+<!-- ========================================================= -->
+<!--                         ABOUT                             -->
+<!-- ========================================================= -->
+
+# About Me
+
+I'm a **Computer Science & Engineering student** who enjoys turning ideas into working products.
+
+My interests sit around **full-stack development, AI systems, product design, and developer tooling**. I like building things that solve practical problems rather than projects that exist only to demonstrate a technology.
+
+Currently, I'm focused on getting better at:
+
+- Building scalable full-stack applications
+- Designing clean and intuitive interfaces
+- Working with AI, RAG and agentic systems
+- Turning prototypes into reliable products
+- Understanding the engineering behind the tools I use
+
+> I like building software that is useful, understandable, and worth coming back to.
+
+<br>
+
+<!-- ========================================================= -->
+<!--                       TECH STACK                          -->
+<!-- ========================================================= -->
+
 # Tech Stack
 
-## Languages
+### Languages
 
 <p>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
@@ -17,7 +61,7 @@
   <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
 </p>
 
-## Frontend
+### Frontend
 
 <p>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
@@ -26,7 +70,7 @@
   <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
 </p>
 
-## Backend & Database
+### Backend & Databases
 
 <p>
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
@@ -38,7 +82,7 @@
   <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
 </p>
 
-## AI & Developer Tools
+### AI & Developer Tools
 
 <p>
   <img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" />
@@ -50,10 +94,10 @@
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
 </p>
 
+<br>
+
 <!-- ========================================================= -->
-
-<!--                     SELECTED WORK                         -->
-
+<!--                      SELECTED WORK                        -->
 <!-- ========================================================= -->
 
 # Selected Work
@@ -65,13 +109,13 @@
 
 ### GST Invoice Reconciliation
 
-An AI-powered system designed to reconcile **Purchase Orders and GST invoices** and identify discrepancies automatically.
+An AI-powered system designed to reconcile **Purchase Orders and GST invoices** and automatically identify discrepancies.
 
-The system combines document extraction, deterministic financial validation, RAG-based retrieval, and agentic workflows — using AI where it adds value while keeping critical financial calculations predictable and traceable.
+The system combines document extraction, deterministic financial validation, RAG-based retrieval and agentic workflows.
 
 **Focus**
 
-`AI` `RAG` `Document Intelligence`
+`AI` `RAG` `Document Intelligence`  
 `Financial Validation` `Agentic Workflows`
 
 </td>
@@ -82,11 +126,11 @@ The system combines document extraction, deterministic financial validation, RAG
 
 A modern digital platform focused on connecting **blood donors and recipients** through a streamlined digital experience.
 
-The project focuses on clarity, accessibility, responsive design, and creating a polished interface around a real-world problem.
+Built around clarity, accessibility, responsive design and a polished user experience.
 
 **Focus**
 
-`Next.js` `React` `TypeScript`
+`Next.js` `React` `TypeScript`  
 `Supabase` `Tailwind CSS` `UI/UX`
 
 </td>
@@ -101,11 +145,11 @@ The project focuses on clarity, accessibility, responsive design, and creating a
 
 An interactive browser-based laboratory designed to help students explore **science experiments digitally**.
 
-The goal is to make scientific concepts more visual, interactive, and approachable while reducing dependency on physical laboratory equipment.
+The goal is to make scientific concepts more visual, interactive and approachable.
 
 **Focus**
 
-`Interactive Learning` `Web Development`
+`Interactive Learning` `Web Development`  
 `Education` `User Experience`
 
 </td>
@@ -116,11 +160,11 @@ The goal is to make scientific concepts more visual, interactive, and approachab
 
 A digital platform exploring how software can help people **understand and reflect on personal growth**.
 
-The emphasis is on useful information, thoughtful interactions, and a clean experience rather than another overloaded productivity dashboard.
+The emphasis is on useful information, thoughtful interactions and a clean experience.
 
 **Focus**
 
-`React` `JavaScript`
+`React` `JavaScript`  
 `Tailwind CSS` `Product Design`
 
 </td>
@@ -128,10 +172,10 @@ The emphasis is on useful information, thoughtful interactions, and a clean expe
 </tr>
 </table>
 
+<br>
+
 <!-- ========================================================= -->
-
 <!--                    GITHUB OVERVIEW                        -->
-
 <!-- ========================================================= -->
 
 # GitHub Overview
@@ -143,12 +187,11 @@ The emphasis is on useful information, thoughtful interactions, and a clean expe
     alt="Gokul's GitHub Statistics"
   />
 
-<img
- src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gokul-555180&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"
- height="180"
- alt="Gokul's Most Used Languages"
-/>
-
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gokul-555180&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"
+    height="180"
+    alt="Gokul's Most Used Languages"
+  />
 </p>
 
 <p align="center">
@@ -158,10 +201,10 @@ The emphasis is on useful information, thoughtful interactions, and a clean expe
   />
 </p>
 
+<br>
+
 <!-- ========================================================= -->
-
-<!--                 GITHUB ACTIVITY                          -->
-
+<!--                     ACTIVITY                              -->
 <!-- ========================================================= -->
 
 # GitHub Activity
@@ -174,12 +217,10 @@ The emphasis is on useful information, thoughtful interactions, and a clean expe
   />
 </p>
 
-> The native GitHub contribution calendar and activity timeline remain available directly on the profile.
+<br>
 
 <!-- ========================================================= -->
-
-<!--                 CURRENTLY EXPLORING                       -->
-
+<!--                   CURRENTLY EXPLORING                     -->
 <!-- ========================================================= -->
 
 # Currently Exploring
@@ -191,13 +232,13 @@ The emphasis is on useful information, thoughtful interactions, and a clean expe
 
 ### Engineering
 
-* React & TypeScript
-* Django & Python
-* Next.js
-* REST APIs
-* PostgreSQL
-* Backend architecture
-* Scalable frontend systems
+- React & TypeScript
+- Django & Python
+- Next.js
+- REST APIs
+- PostgreSQL
+- Backend architecture
+- Scalable frontend systems
 
 </td>
 
@@ -205,38 +246,38 @@ The emphasis is on useful information, thoughtful interactions, and a clean expe
 
 ### AI & Product
 
-* Retrieval-Augmented Generation
-* LangGraph
-* LLM applications
-* Document intelligence
-* Agentic workflows
-* UI / UX systems
-* Product design
+- Retrieval-Augmented Generation
+- LangGraph
+- LLM applications
+- Document intelligence
+- Agentic workflows
+- UI / UX systems
+- Product design
 
 </td>
 
 </tr>
 </table>
 
+<br>
+
 <!-- ========================================================= -->
-
 <!--                    WHAT I'M BUILDING                     -->
-
 <!-- ========================================================= -->
 
 # What I'm Building
 
-| Project                        | Focus                                       | Status      |
-| :----------------------------- | :------------------------------------------ | :---------- |
-| **GST Invoice Reconciliation** | AI-assisted PO & GST invoice reconciliation | `Building`  |
-| **Bloodlink**                  | Blood donor & recipient platform            | `Building`  |
-| **Virtual Science Lab**        | Interactive science education               | `Exploring` |
-| **Growth-Lens**                | Personal growth & reflection platform       | `Evolving`  |
+| Project | Focus | Status |
+| :--- | :--- | :--- |
+| **GST Invoice Reconciliation** | AI-assisted PO & GST invoice reconciliation | `Building` |
+| **Bloodlink** | Blood donor & recipient platform | `Building` |
+| **Virtual Science Lab** | Interactive science education | `Exploring` |
+| **Growth-Lens** | Personal growth & reflection platform | `Evolving` |
+
+<br>
 
 <!-- ========================================================= -->
-
 <!--                    HOW I BUILD                            -->
-
 <!-- ========================================================= -->
 
 # How I Like to Build
@@ -287,56 +328,52 @@ Make it work properly.
 </tr>
 </table>
 
+<br>
+
 > Good software isn't just about making something work.
 > It's about making the whole experience make sense.
 
+<br>
+
 <!-- ========================================================= -->
-
 <!--                    BEYOND THE CODE                        -->
-
 <!-- ========================================================= -->
 
 # Beyond the Code
 
 I'm interested in:
 
-* Building products around real-world problems
-* Hackathons and rapid prototyping
-* AI-assisted development
-* UI/UX and product design
-* Open-source and developer communities
-* Experimenting with new technologies
-* Turning rough ideas into working products
+- Building products around real-world problems
+- Hackathons and rapid prototyping
+- AI-assisted development
+- UI/UX and product design
+- Open-source and developer communities
+- Experimenting with new technologies
+- Turning rough ideas into working products
+
+<br>
 
 <!-- ========================================================= -->
-
-<!--                  GITHUB PROFILE                           -->
-
+<!--                     PROFILE                               -->
 <!-- ========================================================= -->
 
-# GitHub Profile
+# Find Me on GitHub
 
 <p align="center">
 
   <a href="https://github.com/Gokul-555180">
     <img
-      src="https://img.shields.io/badge/PROFILE-View%20GitHub-0f172a?style=for-the-badge&logo=github&logoColor=white"
+      src="https://img.shields.io/badge/GitHub-View%20Profile-0f172a?style=for-the-badge&logo=github&logoColor=white"
+      alt="GitHub Profile"
     />
   </a>
 
 </p>
 
-<p align="center">
-  <sub>
-    Contribution calendar · Activity overview · Contribution activity ·
-    Pinned repositories · Achievements · Followers · Repositories
-  </sub>
-</p>
+<br>
 
 <!-- ========================================================= -->
-
 <!--                      CONNECT                              -->
-
 <!-- ========================================================= -->
 
 # Let's Connect
@@ -352,20 +389,20 @@ I'm interested in:
 
 </p>
 
+<br>
+
 <!-- ========================================================= -->
-
 <!--                       FOOTER                              -->
-
 <!-- ========================================================= -->
 
 <p align="center">
   <img
     src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,50:0f172a,100:0369a1&height=100&section=footer"
     width="100%"
+    alt="Footer"
   />
 </p>
 
 <p align="center">
   <sub>Building things worth opening a browser for.</sub>
 </p>
-```
