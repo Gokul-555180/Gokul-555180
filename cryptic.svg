@@ -1,633 +1,906 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" width="600" height="180">
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 600 180"
+     width="600"
+     height="180">
 
   <defs>
 
+    <!-- ===================================================== -->
+    <!-- TYPOGRAPHY -->
+    <!-- ===================================================== -->
+
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&amp;family=Share+Tech+Mono&amp;display=swap');
 
-      .terminal-text {
-        font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
-        font-weight: bold;
-        font-size: 55px;
-        fill: #00ffcc;
-        text-shadow:
-          0 0 8px rgba(0, 255, 204, 0.6),
-          0 0 20px rgba(0, 255, 204, 0.3);
+      .title {
+        font-family: 'Rajdhani', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 5px;
       }
 
-      .matrix-col {
-        font-family: 'Share Tech Mono', monospace;
-        font-size: 11px;
-        fill: #00ff66;
-        user-select: none;
+      .mono {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
       }
 
-      .sub-text {
-        font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
-        font-size: 13px;
-        letter-spacing: 2px;
-        font-weight: bold;
+      .tiny {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        font-size: 7px;
+        letter-spacing: 1.4px;
       }
 
-      .sub-loading {
-        fill: #ff3366;
-        text-shadow: 0 0 5px rgba(255, 51, 102, 0.6);
-      }
-
-      .sub-ready {
-        fill: #00ffcc;
-        text-shadow: 0 0 5px rgba(0, 255, 204, 0.6);
-      }
-
-      .scanlines {
-        fill: url(#scanline-pattern);
-        opacity: 0.08;
-        pointer-events: none;
+      .small {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        font-size: 8px;
+        letter-spacing: 1px;
       }
     </style>
+
+
+    <!-- ===================================================== -->
+    <!-- CARBON GRID -->
+    <!-- ===================================================== -->
+
+    <pattern
+      id="carbon"
+      width="8"
+      height="8"
+      patternUnits="userSpaceOnUse">
+
+      <path
+        d="M0 0H4V4H0Z M4 4H8V8H4Z"
+        fill="#111317"/>
+
+      <path
+        d="M4 0H8V4H4Z M0 4H4V8H0Z"
+        fill="#0c0e11"/>
+
+    </pattern>
+
+
+    <!-- ===================================================== -->
+    <!-- MICRO GRID -->
+    <!-- ===================================================== -->
 
     <pattern
       id="grid"
       width="20"
       height="20"
       patternUnits="userSpaceOnUse">
+
       <path
-        d="M 20 0 L 0 0 0 20"
+        d="M20 0H0V20"
         fill="none"
-        stroke="#161b22"
-        stroke-width="1"/>
+        stroke="#24282d"
+        stroke-width="0.55"/>
+
     </pattern>
 
-    <pattern
-      id="scanline-pattern"
-      width="100"
-      height="4"
-      patternUnits="userSpaceOnUse">
-      <line
-        x1="0"
-        y1="0"
-        x2="100"
-        y2="0"
-        stroke="#000"
-        stroke-width="2"/>
-    </pattern>
 
-    <clipPath id="text-clip">
+    <!-- ===================================================== -->
+    <!-- GLOW -->
+    <!-- ===================================================== -->
+
+    <filter
+      id="redGlow"
+      x="-100%"
+      y="-100%"
+      width="300%"
+      height="300%">
+
+      <feGaussianBlur
+        stdDeviation="2.5"
+        result="blur"/>
+
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+
+    </filter>
+
+
+    <filter
+      id="whiteGlow"
+      x="-100%"
+      y="-100%"
+      width="300%"
+      height="300%">
+
+      <feGaussianBlur
+        stdDeviation="1.5"
+        result="blur"/>
+
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+
+    </filter>
+
+
+    <!-- ===================================================== -->
+    <!-- TITLE CLIP -->
+    <!-- ===================================================== -->
+
+    <clipPath id="titleClip">
       <rect
-        x="0"
-        y="38"
-        width="600"
-        height="64"/>
+        x="115"
+        y="39"
+        width="370"
+        height="55"/>
+    </clipPath>
+
+
+    <!-- ===================================================== -->
+    <!-- STEERING WHEEL CLIP -->
+    <!-- ===================================================== -->
+
+    <clipPath id="wheelClip">
+      <rect
+        x="120"
+        y="98"
+        width="360"
+        height="72"/>
     </clipPath>
 
   </defs>
 
 
-  <!-- ========================================================= -->
-  <!-- Background -->
-  <!-- ========================================================= -->
+  <!-- ======================================================= -->
+  <!-- BACKGROUND -->
+  <!-- ======================================================= -->
 
   <rect
-    width="100%"
-    height="100%"
-    fill="#0a0b10"
-    rx="10"/>
+    width="600"
+    height="180"
+    rx="10"
+    fill="#08090b"/>
 
   <rect
-    width="100%"
-    height="100%"
+    width="600"
+    height="180"
+    rx="10"
+    fill="url(#carbon)"/>
+
+  <rect
+    width="600"
+    height="180"
+    rx="10"
     fill="url(#grid)"
-    rx="10"/>
+    opacity="0.35"/>
 
 
-  <!-- ========================================================= -->
-  <!-- Falling Matrix Code -->
-  <!-- ========================================================= -->
+  <!-- ======================================================= -->
+  <!-- TOP INFORMATION -->
+  <!-- ======================================================= -->
 
-  <g opacity="0.4">
+  <text
+    x="27"
+    y="27"
+    class="tiny"
+    fill="#656a71">
+    GOKUL N.R.
+  </text>
 
-    <!-- Column 1 -->
+  <text
+    x="573"
+    y="27"
+    text-anchor="end"
+    class="tiny"
+    fill="#656a71">
+    DEVELOPMENT // 01
+  </text>
+
+
+  <!-- ======================================================= -->
+  <!-- TOP RED ACCENT -->
+  <!-- ======================================================= -->
+
+  <path
+    d="M27 34 H155"
+    stroke="#ff1638"
+    stroke-width="2"/>
+
+  <path
+    d="M445 34 H573"
+    stroke="#ff1638"
+    stroke-width="2"/>
+
+  <circle
+    cx="161"
+    cy="34"
+    r="2"
+    fill="#ff1638"/>
+
+  <circle
+    cx="439"
+    cy="34"
+    r="2"
+    fill="#ff1638"/>
+
+
+  <!-- ======================================================= -->
+  <!-- MAIN TITLE -->
+  <!-- ======================================================= -->
+
+  <g clip-path="url(#titleClip)">
+
+    <!-- red offset -->
     <text
-      x="40"
-      y="0"
-      class="matrix-col">
+      x="303"
+      y="88"
+      text-anchor="middle"
+      class="title"
+      font-size="53"
+      fill="#ff1638"
+      opacity="0.38">
+      GOKUL
+    </text>
 
-      <tspan x="40" dy="15">▩</tspan>
-      <tspan x="40" dy="15">1</tspan>
-      <tspan x="40" dy="15">0</tspan>
-      <tspan x="40" dy="15">▚</tspan>
-      <tspan x="40" dy="15">Ø</tspan>
-      <tspan x="40" dy="15">Σ</tspan>
 
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="0 -120; 0 180"
-        dur="4.5s"
-        repeatCount="indefinite"/>
+    <!-- primary -->
+    <text
+      x="300"
+      y="88"
+      text-anchor="middle"
+      class="title"
+      font-size="53"
+      fill="#f2f3f4"
+      filter="url(#whiteGlow)">
+      GOKUL
 
       <animate
         attributeName="opacity"
-        values="0;0.2;0.2;0"
-        keyTimes="0;0.1;0.9;1"
-        dur="4.5s"
+        values="1;1;0.82;1;1"
+        keyTimes="0;0.92;0.935;0.95;1"
+        dur="4s"
         repeatCount="indefinite"/>
+    </text>
+
+
+    <!-- racing glitch line -->
+    <rect
+      x="125"
+      y="66"
+      width="350"
+      height="1"
+      fill="#ff1638"
+      opacity="0">
+
+      <animate
+        attributeName="opacity"
+        values="0;0;0.9;0;0"
+        keyTimes="0;0.91;0.925;0.94;1"
+        dur="4s"
+        repeatCount="indefinite"/>
+
+    </rect>
+
+  </g>
+
+
+  <!-- ======================================================= -->
+  <!-- TITLE UNDERLINE -->
+  <!-- ======================================================= -->
+
+  <line
+    x1="174"
+    y1="96"
+    x2="426"
+    y2="96"
+    stroke="#30343a"
+    stroke-width="1"/>
+
+  <line
+    x1="174"
+    y1="96"
+    x2="238"
+    y2="96"
+    stroke="#ff1638"
+    stroke-width="2"
+    filter="url(#redGlow)"/>
+
+
+  <!-- ======================================================= -->
+  <!-- F1 STEERING WHEEL -->
+  <!-- ======================================================= -->
+
+  <g clip-path="url(#wheelClip)">
+
+
+    <!-- ----------------------------------------------------- -->
+    <!-- OUTER STEERING WHEEL -->
+    <!-- ----------------------------------------------------- -->
+
+    <path
+      d="
+        M138 157
+        C137 137 151 116 176 108
+        C205 98 244 102 300 102
+        C356 102 395 98 424 108
+        C449 116 463 137 462 157
+      "
+      fill="none"
+      stroke="#2c3035"
+      stroke-width="13"
+      stroke-linecap="round"/>
+
+
+    <!-- red inner rim -->
+    <path
+      d="
+        M145 154
+        C145 137 158 121 181 113
+        C211 103 251 107 300 107
+        C349 107 389 103 419 113
+        C442 121 455 137 455 154
+      "
+      fill="none"
+      stroke="#0a0c0f"
+      stroke-width="8"
+      stroke-linecap="round"/>
+
+
+    <path
+      d="
+        M145 151
+        C145 135 160 121 182 114
+      "
+      fill="none"
+      stroke="#ff1638"
+      stroke-width="2"
+      opacity="0.8"/>
+
+
+    <path
+      d="
+        M418 114
+        C440 121 455 135 455 151
+      "
+      fill="none"
+      stroke="#ff1638"
+      stroke-width="2"
+      opacity="0.8"/>
+
+
+    <!-- ----------------------------------------------------- -->
+    <!-- LEFT HANDLE -->
+    <!-- ----------------------------------------------------- -->
+
+    <path
+      d="M144 137 L126 148 L126 164 L151 164 L163 149"
+      fill="#111419"
+      stroke="#3a3f45"
+      stroke-width="1"/>
+
+
+    <path
+      d="M126 149 L139 142"
+      stroke="#ff1638"
+      stroke-width="2"/>
+
+
+    <!-- ----------------------------------------------------- -->
+    <!-- RIGHT HANDLE -->
+    <!-- ----------------------------------------------------- -->
+
+    <path
+      d="M456 137 L474 148 L474 164 L449 164 L437 149"
+      fill="#111419"
+      stroke="#3a3f45"
+      stroke-width="1"/>
+
+
+    <path
+      d="M474 149 L461 142"
+      stroke="#ff1638"
+      stroke-width="2"/>
+
+
+    <!-- ----------------------------------------------------- -->
+    <!-- CENTRAL WHEEL BODY -->
+    <!-- ----------------------------------------------------- -->
+
+    <path
+      d="
+        M211 122
+        L237 112
+        L363 112
+        L389 122
+        L370 157
+        L230 157
+        Z"
+      fill="#0d1013"
+      stroke="#343940"
+      stroke-width="1.2"/>
+
+
+    <!-- carbon face -->
+    <path
+      d="
+        M221 124
+        L242 116
+        L358 116
+        L379 124
+        L363 153
+        L237 153
+        Z"
+      fill="url(#carbon)"/>
+
+
+    <!-- ===================================================== -->
+    <!-- REV COUNTER DISPLAY -->
+    <!-- ===================================================== -->
+
+    <rect
+      x="247"
+      y="121"
+      width="106"
+      height="29"
+      rx="3"
+      fill="#050607"
+      stroke="#262a2f"
+      stroke-width="1"/>
+
+
+    <!-- RPM value -->
+
+    <text
+      x="300"
+      y="140"
+      text-anchor="middle"
+      class="mono"
+      font-size="16"
+      font-weight="bold"
+      fill="#f4f5f6">
+
+      11,842
 
     </text>
 
 
-    <!-- Column 2 -->
     <text
-      x="140"
-      y="0"
-      class="matrix-col">
+      x="300"
+      y="147"
+      text-anchor="middle"
+      class="tiny"
+      fill="#737980">
 
-      <tspan x="140" dy="15">█</tspan>
-      <tspan x="140" dy="15">7</tspan>
-      <tspan x="140" dy="15">▩</tspan>
-      <tspan x="140" dy="15">æ</tspan>
-      <tspan x="140" dy="15">1</tspan>
-      <tspan x="140" dy="15">0</tspan>
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="0 -120; 0 180"
-        dur="3.8s"
-        begin="1.5s"
-        repeatCount="indefinite"/>
-
-      <animate
-        attributeName="opacity"
-        values="0;0.15;0.15;0"
-        keyTimes="0;0.1;0.9;1"
-        dur="3.8s"
-        begin="1.5s"
-        repeatCount="indefinite"/>
+      RPM
 
     </text>
 
 
-    <!-- Column 3 -->
+    <!-- ===================================================== -->
+    <!-- SHIFT LIGHTS -->
+    <!-- ===================================================== -->
+
+    <g>
+
+      <!-- 1 -->
+      <rect
+        x="254"
+        y="116"
+        width="7"
+        height="3"
+        rx="1"
+        fill="#2b0a0f">
+
+        <animate
+          attributeName="fill"
+          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
+          keyTimes="0;0.15;0.30;0.40"
+          dur="2.2s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+
+      <!-- 2 -->
+      <rect
+        x="264"
+        y="116"
+        width="7"
+        height="3"
+        rx="1"
+        fill="#2b0a0f">
+
+        <animate
+          attributeName="fill"
+          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
+          keyTimes="0;0.20;0.35;0.45"
+          dur="2.2s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+
+      <!-- 3 -->
+      <rect
+        x="274"
+        y="116"
+        width="7"
+        height="3"
+        rx="1"
+        fill="#2b0a0f">
+
+        <animate
+          attributeName="fill"
+          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
+          keyTimes="0;0.25;0.40;0.50"
+          dur="2.2s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+
+      <!-- 4 -->
+      <rect
+        x="284"
+        y="116"
+        width="7"
+        height="3"
+        rx="1"
+        fill="#2b0a0f">
+
+        <animate
+          attributeName="fill"
+          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
+          keyTimes="0;0.30;0.45;0.55"
+          dur="2.2s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+
+      <!-- 5 -->
+      <rect
+        x="294"
+        y="116"
+        width="7"
+        height="3"
+        rx="1"
+        fill="#2b0a0f">
+
+        <animate
+          attributeName="fill"
+          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
+          keyTimes="0;0.35;0.50;0.60"
+          dur="2.2s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+
+      <!-- 6 -->
+      <rect
+        x="304"
+        y="116"
+        width="7"
+        height="3"
+        rx="1"
+        fill="#2b0a0f">
+
+        <animate
+          attributeName="fill"
+          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
+          keyTimes="0;0.40;0.55;0.65"
+          dur="2.2s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+
+      <!-- 7 -->
+      <rect
+        x="314"
+        y="116"
+        width="7"
+        height="3"
+        rx="1"
+        fill="#2b0a0f">
+
+        <animate
+          attributeName="fill"
+          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
+          keyTimes="0;0.45;0.60;0.70"
+          dur="2.2s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+
+      <!-- 8 -->
+      <rect
+        x="324"
+        y="116"
+        width="7"
+        height="3"
+        rx="1"
+        fill="#2b0a0f">
+
+        <animate
+          attributeName="fill"
+          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
+          keyTimes="0;0.50;0.65;0.75"
+          dur="2.2s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+
+      <!-- 9 -->
+      <rect
+        x="334"
+        y="116"
+        width="7"
+        height="3"
+        rx="1"
+        fill="#2b0a0f">
+
+        <animate
+          attributeName="fill"
+          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
+          keyTimes="0;0.55;0.70;0.80"
+          dur="2.2s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+
+      <!-- 10 -->
+      <rect
+        x="344"
+        y="116"
+        width="7"
+        height="3"
+        rx="1"
+        fill="#2b0a0f">
+
+        <animate
+          attributeName="fill"
+          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
+          keyTimes="0;0.60;0.75;0.85"
+          dur="2.2s"
+          repeatCount="indefinite"/>
+
+      </rect>
+
+    </g>
+
+
+    <!-- ===================================================== -->
+    <!-- WHEEL BUTTONS -->
+    <!-- ===================================================== -->
+
+    <circle
+      cx="225"
+      cy="132"
+      r="4"
+      fill="#191c20"
+      stroke="#464b52"
+      stroke-width="1"/>
+
+    <circle
+      cx="375"
+      cy="132"
+      r="4"
+      fill="#191c20"
+      stroke="#464b52"
+      stroke-width="1"/>
+
+
+    <circle
+      cx="225"
+      cy="144"
+      r="4"
+      fill="#ff1638"
+      opacity="0.85"/>
+
+    <circle
+      cx="375"
+      cy="144"
+      r="4"
+      fill="#ff1638"
+      opacity="0.85"/>
+
+
+    <!-- ===================================================== -->
+    <!-- STEERING SPOKES -->
+    <!-- ===================================================== -->
+
+    <path
+      d="M247 148 L226 158"
+      stroke="#363b41"
+      stroke-width="5"/>
+
+    <path
+      d="M353 148 L374 158"
+      stroke="#363b41"
+      stroke-width="5"/>
+
+
+    <path
+      d="M300 150 V165"
+      stroke="#363b41"
+      stroke-width="5"/>
+
+
+    <!-- central lower red marker -->
+    <path
+      d="M293 157 H307 L303 164 H297 Z"
+      fill="#ff1638"/>
+
+  </g>
+
+
+  <!-- ======================================================= -->
+  <!-- STEERING WHEEL TELEMETRY -->
+  <!-- ======================================================= -->
+
+  <text
+    x="28"
+    y="116"
+    class="tiny"
+    fill="#555b62">
+    LAP
+  </text>
+
+  <text
+    x="28"
+    y="127"
+    class="small"
+    fill="#f0f1f2">
+    01
+  </text>
+
+
+  <text
+    x="572"
+    y="116"
+    text-anchor="end"
+    class="tiny"
+    fill="#555b62">
+    DELTA
+  </text>
+
+  <text
+    x="572"
+    y="127"
+    text-anchor="end"
+    class="small"
+    fill="#ff1638">
+    -0.247
+  </text>
+
+
+  <!-- ======================================================= -->
+  <!-- FULL STACK / AI LABEL -->
+  <!-- ======================================================= -->
+
+  <g>
+
+    <rect
+      x="173"
+      y="166"
+      width="254"
+      height="10"
+      rx="2"
+      fill="#0b0d10"
+      stroke="#282c31"
+      stroke-width="0.7"/>
+
+
+    <rect
+      x="174"
+      y="166"
+      width="3"
+      height="10"
+      fill="#ff1638"/>
+
+
     <text
-      x="460"
-      y="0"
-      class="matrix-col">
+      x="300"
+      y="173.2"
+      text-anchor="middle"
+      class="tiny"
+      font-size="7"
+      fill="#d8dade">
 
-      <tspan x="460" dy="15">▞</tspan>
-      <tspan x="460" dy="15">0</tspan>
-      <tspan x="460" dy="15">μ</tspan>
-      <tspan x="460" dy="15">1</tspan>
-      <tspan x="460" dy="15">λ</tspan>
-      <tspan x="460" dy="15">▩</tspan>
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="0 -120; 0 180"
-        dur="5.2s"
-        begin="0.8s"
-        repeatCount="indefinite"/>
-
-      <animate
-        attributeName="opacity"
-        values="0;0.2;0.2;0"
-        keyTimes="0;0.1;0.9;1"
-        dur="5.2s"
-        begin="0.8s"
-        repeatCount="indefinite"/>
-
-    </text>
-
-
-    <!-- Column 4 -->
-    <text
-      x="540"
-      y="0"
-      class="matrix-col">
-
-      <tspan x="540" dy="15">1</tspan>
-      <tspan x="540" dy="15">0</tspan>
-      <tspan x="540" dy="15">π</tspan>
-      <tspan x="540" dy="15">▚</tspan>
-      <tspan x="540" dy="15">θ</tspan>
-      <tspan x="540" dy="15">█</tspan>
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="0 -120; 0 180"
-        dur="4.1s"
-        begin="2.2s"
-        repeatCount="indefinite"/>
-
-      <animate
-        attributeName="opacity"
-        values="0;0.15;0.15;0"
-        keyTimes="0;0.1;0.9;1"
-        dur="4.1s"
-        begin="2.2s"
-        repeatCount="indefinite"/>
+      FULL-STACK DEVELOPMENT // AI SYSTEMS
 
     </text>
 
   </g>
 
 
-  <!-- ========================================================= -->
-  <!-- Cyber Border -->
-  <!-- ========================================================= -->
+  <!-- ======================================================= -->
+  <!-- OUTER FRAME -->
+  <!-- ======================================================= -->
+
+  <rect
+    x="9"
+    y="9"
+    width="582"
+    height="162"
+    rx="9"
+    fill="none"
+    stroke="#2c3035"
+    stroke-width="1"/>
+
+
+  <!-- ======================================================= -->
+  <!-- PREMIUM CORNER ACCENTS -->
+  <!-- ======================================================= -->
+
+  <path
+    d="M10 39 V10 H58"
+    fill="none"
+    stroke="#ff1638"
+    stroke-width="2.5"/>
+
+  <path
+    d="M590 39 V10 H542"
+    fill="none"
+    stroke="#ff1638"
+    stroke-width="2.5"/>
+
+  <path
+    d="M10 141 V170 H58"
+    fill="none"
+    stroke="#ff1638"
+    stroke-width="2.5"/>
+
+  <path
+    d="M590 141 V170 H542"
+    fill="none"
+    stroke="#ff1638"
+    stroke-width="2.5"/>
+
+
+  <!-- ======================================================= -->
+  <!-- MOVING HORIZONTAL SCAN -->
+  <!-- ======================================================= -->
 
   <rect
     x="10"
-    y="10"
+    y="39"
     width="580"
-    height="160"
-    rx="8"
-    fill="none"
-    stroke="#1f2438"
-    stroke-width="1.5"/>
-
-
-  <!-- Neon corners -->
-
-  <path
-    d="M 10 35 L 10 10 L 35 10"
-    fill="none"
-    stroke="#00ffcc"
-    stroke-width="2.5"
-    stroke-linecap="round"/>
-
-  <path
-    d="M 590 35 L 590 10 L 565 10"
-    fill="none"
-    stroke="#00ffcc"
-    stroke-width="2.5"
-    stroke-linecap="round"/>
-
-  <path
-    d="M 10 145 L 10 170 L 35 170"
-    fill="none"
-    stroke="#00ffcc"
-    stroke-width="2.5"
-    stroke-linecap="round"/>
-
-  <path
-    d="M 590 145 L 590 170 L 565 170"
-    fill="none"
-    stroke="#00ffcc"
-    stroke-width="2.5"
-    stroke-linecap="round"/>
-
-
-  <!-- ========================================================= -->
-  <!-- GOKUL Terminal Text -->
-  <!-- ========================================================= -->
-
-  <g clip-path="url(#text-clip)">
-
-
-    <!-- ======================================================= -->
-    <!-- G -->
-    <!-- ======================================================= -->
-
-    <g>
-
-      <text x="195" y="86" class="terminal-text">_</text>
-      <text x="195" y="146" class="terminal-text">0</text>
-      <text x="195" y="206" class="terminal-text">1</text>
-      <text x="195" y="266" class="terminal-text">▚</text>
-      <text x="195" y="326" class="terminal-text">¶</text>
-      <text x="195" y="386" class="terminal-text">¥</text>
-      <text x="195" y="446" class="terminal-text">Σ</text>
-      <text x="195" y="506" class="terminal-text">Ω</text>
-      <text x="195" y="566" class="terminal-text">β</text>
-      <text x="195" y="626" class="terminal-text">æ</text>
-      <text x="195" y="686" class="terminal-text">G</text>
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="
-          0 0;
-          0 -120;
-          0 -300;
-          0 -180;
-          0 -480;
-          0 -540;
-          0 -600;
-          0 -600;
-          0 -360;
-          0 -120;
-          0 0"
-        keyTimes="
-          0;
-          0.02;
-          0.05;
-          0.08;
-          0.11;
-          0.14;
-          0.17;
-          0.90;
-          0.93;
-          0.96;
-          1"
-        dur="7s"
-        repeatCount="indefinite"/>
-
-    </g>
-
-
-    <!-- ======================================================= -->
-    <!-- O -->
-    <!-- ======================================================= -->
-
-    <g>
-
-      <text x="245" y="86" class="terminal-text">_</text>
-      <text x="245" y="146" class="terminal-text">1</text>
-      <text x="245" y="206" class="terminal-text">0</text>
-      <text x="245" y="266" class="terminal-text">▞</text>
-      <text x="245" y="326" class="terminal-text">§</text>
-      <text x="245" y="386" class="terminal-text">€</text>
-      <text x="245" y="446" class="terminal-text">Δ</text>
-      <text x="245" y="506" class="terminal-text">μ</text>
-      <text x="245" y="566" class="terminal-text">λ</text>
-      <text x="245" y="626" class="terminal-text">œ</text>
-      <text x="245" y="686" class="terminal-text">O</text>
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="
-          0 0;
-          0 -180;
-          0 -60;
-          0 -420;
-          0 -240;
-          0 -540;
-          0 -600;
-          0 -600;
-          0 -240;
-          0 -60;
-          0 0"
-        keyTimes="
-          0;
-          0.03;
-          0.06;
-          0.10;
-          0.14;
-          0.18;
-          0.22;
-          0.90;
-          0.94;
-          0.98;
-          1"
-        dur="7s"
-        repeatCount="indefinite"/>
-
-    </g>
-
-
-    <!-- ======================================================= -->
-    <!-- K -->
-    <!-- ======================================================= -->
-
-    <g>
-
-      <text x="295" y="86" class="terminal-text">_</text>
-      <text x="295" y="146" class="terminal-text">0</text>
-      <text x="295" y="206" class="terminal-text">1</text>
-      <text x="295" y="266" class="terminal-text">█</text>
-      <text x="295" y="326" class="terminal-text">‡</text>
-      <text x="295" y="386" class="terminal-text">£</text>
-      <text x="295" y="446" class="terminal-text">Ξ</text>
-      <text x="295" y="506" class="terminal-text">π</text>
-      <text x="295" y="566" class="terminal-text">θ</text>
-      <text x="295" y="626" class="terminal-text">ÿ</text>
-      <text x="295" y="686" class="terminal-text">K</text>
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="
-          0 0;
-          0 -240;
-          0 -120;
-          0 -480;
-          0 -300;
-          0 -540;
-          0 -600;
-          0 -600;
-          0 -180;
-          0 -120;
-          0 0"
-        keyTimes="
-          0;
-          0.04;
-          0.08;
-          0.13;
-          0.18;
-          0.22;
-          0.26;
-          0.90;
-          0.95;
-          0.98;
-          1"
-        dur="7s"
-        repeatCount="indefinite"/>
-
-    </g>
-
-
-    <!-- ======================================================= -->
-    <!-- U -->
-    <!-- ======================================================= -->
-
-    <g>
-
-      <text x="345" y="86" class="terminal-text">_</text>
-      <text x="345" y="146" class="terminal-text">1</text>
-      <text x="345" y="206" class="terminal-text">0</text>
-      <text x="345" y="266" class="terminal-text">▚</text>
-      <text x="345" y="326" class="terminal-text">§</text>
-      <text x="345" y="386" class="terminal-text">€</text>
-      <text x="345" y="446" class="terminal-text">Δ</text>
-      <text x="345" y="506" class="terminal-text">μ</text>
-      <text x="345" y="566" class="terminal-text">λ</text>
-      <text x="345" y="626" class="terminal-text">Ω</text>
-      <text x="345" y="686" class="terminal-text">U</text>
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="
-          0 0;
-          0 -180;
-          0 -60;
-          0 -420;
-          0 -240;
-          0 -540;
-          0 -600;
-          0 -600;
-          0 -240;
-          0 -60;
-          0 0"
-        keyTimes="
-          0;
-          0.03;
-          0.06;
-          0.10;
-          0.14;
-          0.18;
-          0.22;
-          0.90;
-          0.94;
-          0.98;
-          1"
-        dur="7s"
-        repeatCount="indefinite"/>
-
-    </g>
-
-
-    <!-- ======================================================= -->
-    <!-- L -->
-    <!-- ======================================================= -->
-
-    <g>
-
-      <text x="395" y="86" class="terminal-text">_</text>
-      <text x="395" y="146" class="terminal-text">0</text>
-      <text x="395" y="206" class="terminal-text">1</text>
-      <text x="395" y="266" class="terminal-text">▞</text>
-      <text x="395" y="326" class="terminal-text">¶</text>
-      <text x="395" y="386" class="terminal-text">¥</text>
-      <text x="395" y="446" class="terminal-text">Σ</text>
-      <text x="395" y="506" class="terminal-text">Ω</text>
-      <text x="395" y="566" class="terminal-text">β</text>
-      <text x="395" y="626" class="terminal-text">æ</text>
-      <text x="395" y="686" class="terminal-text">L</text>
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="
-          0 0;
-          0 -240;
-          0 -120;
-          0 -480;
-          0 -300;
-          0 -540;
-          0 -600;
-          0 -600;
-          0 -180;
-          0 -120;
-          0 0"
-        keyTimes="
-          0;
-          0.04;
-          0.08;
-          0.13;
-          0.18;
-          0.22;
-          0.26;
-          0.90;
-          0.95;
-          0.98;
-          1"
-        dur="7s"
-        repeatCount="indefinite"/>
-
-    </g>
-
-  </g>
-
-
-  <!-- ========================================================= -->
-  <!-- Blinking Cursor -->
-  <!-- ========================================================= -->
-
-  <rect
-    x="445"
-    y="48"
-    width="16"
-    height="42"
-    fill="#00ffcc"
-    filter="drop-shadow(0 0 4px rgba(0,255,204,0.6))">
+    height="1"
+    fill="#ff1638"
+    opacity="0.18">
 
     <animate
-      attributeName="opacity"
-      values="1;1;0;0"
-      keyTimes="0;0.49;0.50;0.99"
-      dur="0.8s"
+      attributeName="y"
+      values="39;158;39"
+      dur="5s"
       repeatCount="indefinite"/>
 
   </rect>
 
 
-  <!-- ========================================================= -->
-  <!-- Subtitle -->
-  <!-- ========================================================= -->
+  <!-- ======================================================= -->
+  <!-- SUBTLE SCANLINES -->
+  <!-- ======================================================= -->
 
-  <text
-    x="315"
-    y="132"
-    text-anchor="middle"
-    class="sub-text sub-loading">
+  <g
+    opacity="0.025"
+    pointer-events="none">
 
-    [ INITIALIZING_PROFILE... ]
+    <path
+      d="M10 45 H590 M10 49 H590 M10 53 H590
+         M10 57 H590 M10 61 H590 M10 65 H590
+         M10 69 H590 M10 73 H590 M10 77 H590
+         M10 81 H590 M10 85 H590 M10 89 H590
+         M10 93 H590 M10 97 H590 M10 101 H590
+         M10 105 H590 M10 109 H590 M10 113 H590
+         M10 117 H590 M10 121 H590 M10 125 H590
+         M10 129 H590 M10 133 H590 M10 137 H590
+         M10 141 H590 M10 145 H590 M10 149 H590
+         M10 153 H590 M10 157 H590"
+      stroke="#ffffff"
+      stroke-width="1"/>
 
-    <animate
-      attributeName="opacity"
-      values="1;1;0;0"
-      keyTimes="0;0.25;0.26;1"
-      dur="7s"
-      repeatCount="indefinite"/>
-
-  </text>
-
-
-  <text
-    x="315"
-    y="132"
-    text-anchor="middle"
-    class="sub-text sub-ready">
-
-    [ FULL-STACK DEVELOPMENT &amp; AI ]
-
-    <animate
-      attributeName="opacity"
-      values="0;0;1;1;0"
-      keyTimes="0;0.25;0.26;0.90;1"
-      dur="7s"
-      repeatCount="indefinite"/>
-
-  </text>
-
-
-  <!-- ========================================================= -->
-  <!-- Decorative Horizontal Rule -->
-  <!-- ========================================================= -->
-
-  <line
-    x1="150"
-    y1="145"
-    x2="450"
-    y2="145"
-    stroke="#1f2438"
-    stroke-dasharray="5,5"
-    stroke-width="1"/>
-
-
-  <!-- ========================================================= -->
-  <!-- Scanlines -->
-  <!-- ========================================================= -->
-
-  <rect
-    width="100%"
-    height="100%"
-    class="scanlines"
-    rx="10"/>
+  </g>
 
 </svg>
