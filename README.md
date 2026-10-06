@@ -4,7 +4,7 @@
 
 I build software at the intersection of **engineering, product, and design**.
 
-I enjoy taking an idea from a rough concept to something people can actually use — designing the interface, building the system behind it, and occasionally spending far too long wondering why one tiny thing isn't working.
+I enjoy taking an idea from a rough concept to something people can actually use - designing the interface, building the system behind it, and occasionally spending far too long wondering why one tiny thing isn't working.
 
 Currently exploring **React, TypeScript, Django, Node.js, AI/LLM systems, and modern web architecture.**
 
