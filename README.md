@@ -1,63 +1,10 @@
-````markdown
-<!-- ========================================================= -->
-<!--                         HERO                              -->
-<!-- ========================================================= -->
-
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,50:0f172a,100:0369a1&height=220&section=header&text=GOKUL%20N.%20R.&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=FULL-STACK%20DEVELOPMENT%20%7C%20AI%20%7C%20UI%2FUX&descAlignY=61&descSize=16&animation=fadeIn"
+    src="./cryptic.svg"
     width="100%"
+    alt="Gokul N. R. — Full-Stack Development & AI"
   />
 </p>
-
-<p align="center">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=750&lines=Computer+Science+%26+Engineering+Student;Full-Stack+Developer;AI+%26+RAG+Enthusiast;UI%2FUX+%26+Product+Design;Building+useful+things+with+code"
-    alt="Typing animation"
-  />
-</p>
-
-<p align="center">
-  <a href="https://github.com/Gokul-555180">
-    <img src="https://img.shields.io/github/followers/Gokul-555180?style=flat-square&label=FOLLOWERS&color=0f172a&labelColor=020617" />
-  </a>
-
-  <img src="https://img.shields.io/github/stars/Gokul-555180?style=flat-square&label=STARS&color=0f172a&labelColor=020617" />
-
-  <img src="https://komarev.com/ghpvc/?username=Gokul-555180&style=flat-square&label=PROFILE+VIEWS&color=0f172a&labelColor=020617" />
-</p>
-
-<p align="center">
-  <code>FULL-STACK</code>
-  <code>AI / RAG</code>
-  <code>UI / UX</code>
-  <code>PRODUCT</code>
-</p>
-
-<br>
-
-
-<!-- ========================================================= -->
-<!--                         ABOUT                             -->
-<!-- ========================================================= -->
-
-## About
-
-I'm a Computer Science & Engineering student who enjoys building software at the intersection of **engineering, product, and design**.
-
-I like taking an idea from a rough concept to something people can actually use — designing the interface, building the system behind it, connecting the data, and making the whole thing feel like one coherent product.
-
-Currently exploring **React, TypeScript, Django, Node.js, AI/LLM systems, RAG, and modern web architecture.**
-
-```text
-BUILD → TEST → BREAK → FIX → POLISH → SHIP
-````
-
-<!-- ========================================================= -->
-
-<!--                       TECH STACK                          -->
-
-<!-- ========================================================= -->
 
 # Tech Stack
 
