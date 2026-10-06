@@ -5,899 +5,765 @@
 
   <defs>
 
-    <!-- ===================================================== -->
-    <!-- TYPOGRAPHY -->
-    <!-- ===================================================== -->
+    <!-- Carbon-fibre style pattern -->
+    <pattern id="carbon"
+             width="8"
+             height="8"
+             patternUnits="userSpaceOnUse">
 
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&amp;family=Share+Tech+Mono&amp;display=swap');
+      <rect width="8" height="8" fill="#090a0c"/>
 
-      .title {
-        font-family: 'Rajdhani', 'Arial Narrow', Arial, sans-serif;
-        font-weight: 700;
-        letter-spacing: 5px;
-      }
+      <path d="M0 0H4V4H0Z"
+            fill="#111317"/>
 
-      .mono {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-      }
-
-      .tiny {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 7px;
-        letter-spacing: 1.4px;
-      }
-
-      .small {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 8px;
-        letter-spacing: 1px;
-      }
-    </style>
-
-
-    <!-- ===================================================== -->
-    <!-- CARBON GRID -->
-    <!-- ===================================================== -->
-
-    <pattern
-      id="carbon"
-      width="8"
-      height="8"
-      patternUnits="userSpaceOnUse">
-
-      <path
-        d="M0 0H4V4H0Z M4 4H8V8H4Z"
-        fill="#111317"/>
-
-      <path
-        d="M4 0H8V4H4Z M0 4H4V8H0Z"
-        fill="#0c0e11"/>
+      <path d="M4 4H8V8H4Z"
+            fill="#111317"/>
 
     </pattern>
 
+    <!-- Subtle technical grid -->
+    <pattern id="grid"
+             width="20"
+             height="20"
+             patternUnits="userSpaceOnUse">
 
-    <!-- ===================================================== -->
-    <!-- MICRO GRID -->
-    <!-- ===================================================== -->
-
-    <pattern
-      id="grid"
-      width="20"
-      height="20"
-      patternUnits="userSpaceOnUse">
-
-      <path
-        d="M20 0H0V20"
-        fill="none"
-        stroke="#24282d"
-        stroke-width="0.55"/>
+      <path d="M20 0H0V20"
+            fill="none"
+            stroke="#25292e"
+            stroke-width="0.6"/>
 
     </pattern>
 
-
-    <!-- ===================================================== -->
-    <!-- GLOW -->
-    <!-- ===================================================== -->
-
-    <filter
-      id="redGlow"
-      x="-100%"
-      y="-100%"
-      width="300%"
-      height="300%">
-
-      <feGaussianBlur
-        stdDeviation="2.5"
-        result="blur"/>
-
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-
-    </filter>
-
-
-    <filter
-      id="whiteGlow"
-      x="-100%"
-      y="-100%"
-      width="300%"
-      height="300%">
-
-      <feGaussianBlur
-        stdDeviation="1.5"
-        result="blur"/>
-
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-
-    </filter>
-
-
-    <!-- ===================================================== -->
-    <!-- TITLE CLIP -->
-    <!-- ===================================================== -->
-
+    <!-- Title clipping -->
     <clipPath id="titleClip">
-      <rect
-        x="115"
-        y="39"
-        width="370"
-        height="55"/>
-    </clipPath>
-
-
-    <!-- ===================================================== -->
-    <!-- STEERING WHEEL CLIP -->
-    <!-- ===================================================== -->
-
-    <clipPath id="wheelClip">
-      <rect
-        x="120"
-        y="98"
-        width="360"
-        height="72"/>
+      <rect x="105"
+            y="38"
+            width="390"
+            height="60"/>
     </clipPath>
 
   </defs>
 
 
-  <!-- ======================================================= -->
-  <!-- BACKGROUND -->
-  <!-- ======================================================= -->
+  <!-- ====================================================== -->
+  <!-- BACKGROUND                                             -->
+  <!-- ====================================================== -->
 
-  <rect
-    width="600"
-    height="180"
-    rx="10"
-    fill="#08090b"/>
+  <rect x="0"
+        y="0"
+        width="600"
+        height="180"
+        rx="10"
+        fill="#070809"/>
 
-  <rect
-    width="600"
-    height="180"
-    rx="10"
-    fill="url(#carbon)"/>
+  <rect x="0"
+        y="0"
+        width="600"
+        height="180"
+        rx="10"
+        fill="url(#carbon)"/>
 
-  <rect
-    width="600"
-    height="180"
-    rx="10"
-    fill="url(#grid)"
-    opacity="0.35"/>
+  <rect x="0"
+        y="0"
+        width="600"
+        height="180"
+        rx="10"
+        fill="url(#grid)"
+        opacity="0.28"/>
 
 
-  <!-- ======================================================= -->
-  <!-- TOP INFORMATION -->
-  <!-- ======================================================= -->
+  <!-- ====================================================== -->
+  <!-- HEADER                                                  -->
+  <!-- ====================================================== -->
 
-  <text
-    x="27"
-    y="27"
-    class="tiny"
-    fill="#656a71">
+  <text x="27"
+        y="27"
+        fill="#747980"
+        font-family="monospace"
+        font-size="7"
+        letter-spacing="1.4">
+
     GOKUL N.R.
-  </text>
 
-  <text
-    x="573"
-    y="27"
-    text-anchor="end"
-    class="tiny"
-    fill="#656a71">
-    DEVELOPMENT // 01
   </text>
 
 
-  <!-- ======================================================= -->
-  <!-- TOP RED ACCENT -->
-  <!-- ======================================================= -->
+  <text x="573"
+        y="27"
+        text-anchor="end"
+        fill="#747980"
+        font-family="monospace"
+        font-size="7"
+        letter-spacing="1.4">
 
-  <path
-    d="M27 34 H155"
-    stroke="#ff1638"
-    stroke-width="2"/>
+    P1 // SOFTWARE
 
-  <path
-    d="M445 34 H573"
-    stroke="#ff1638"
-    stroke-width="2"/>
-
-  <circle
-    cx="161"
-    cy="34"
-    r="2"
-    fill="#ff1638"/>
-
-  <circle
-    cx="439"
-    cy="34"
-    r="2"
-    fill="#ff1638"/>
+  </text>
 
 
-  <!-- ======================================================= -->
-  <!-- MAIN TITLE -->
-  <!-- ======================================================= -->
+  <!-- red header lines -->
+
+  <path d="M27 34H155"
+        stroke="#ff1638"
+        stroke-width="2"/>
+
+  <path d="M445 34H573"
+        stroke="#ff1638"
+        stroke-width="2"/>
+
+
+  <!-- ====================================================== -->
+  <!-- START LIGHTS                                           -->
+  <!-- ====================================================== -->
+
+  <rect x="252"
+        y="12"
+        width="96"
+        height="23"
+        rx="4"
+        fill="#0d0f12"
+        stroke="#30343a"
+        stroke-width="1"/>
+
+
+  <circle cx="265"
+          cy="23.5"
+          r="4"
+          fill="#33070c">
+
+    <animate attributeName="fill"
+             values="#33070c;#ff1638;#ff1638;#33070c"
+             keyTimes="0;0.16;0.27;0.38"
+             dur="7s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <circle cx="283"
+          cy="23.5"
+          r="4"
+          fill="#33070c">
+
+    <animate attributeName="fill"
+             values="#33070c;#ff1638;#ff1638;#33070c"
+             keyTimes="0;0.21;0.32;0.43"
+             dur="7s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <circle cx="301"
+          cy="23.5"
+          r="4"
+          fill="#33070c">
+
+    <animate attributeName="fill"
+             values="#33070c;#ff1638;#ff1638;#33070c"
+             keyTimes="0;0.26;0.37;0.48"
+             dur="7s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <circle cx="319"
+          cy="23.5"
+          r="4"
+          fill="#33070c">
+
+    <animate attributeName="fill"
+             values="#33070c;#ff1638;#ff1638;#33070c"
+             keyTimes="0;0.31;0.42;0.53"
+             dur="7s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <circle cx="337"
+          cy="23.5"
+          r="4"
+          fill="#33070c">
+
+    <animate attributeName="fill"
+             values="#33070c;#ff1638;#ff1638;#33070c"
+             keyTimes="0;0.36;0.47;0.58"
+             dur="7s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <!-- ====================================================== -->
+  <!-- MAIN NAME                                               -->
+  <!-- ====================================================== -->
 
   <g clip-path="url(#titleClip)">
 
-    <!-- red offset -->
-    <text
-      x="303"
-      y="88"
-      text-anchor="middle"
-      class="title"
-      font-size="53"
-      fill="#ff1638"
-      opacity="0.38">
+    <!-- Red offset -->
+    <text x="303"
+          y="89"
+          text-anchor="middle"
+          fill="#ff1638"
+          opacity="0.35"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="53"
+          font-weight="900"
+          letter-spacing="5">
+
       GOKUL
+
     </text>
 
 
-    <!-- primary -->
-    <text
-      x="300"
-      y="88"
-      text-anchor="middle"
-      class="title"
-      font-size="53"
-      fill="#f2f3f4"
-      filter="url(#whiteGlow)">
+    <!-- Main title -->
+    <text x="300"
+          y="89"
+          text-anchor="middle"
+          fill="#f4f5f6"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="53"
+          font-weight="900"
+          letter-spacing="5">
+
       GOKUL
 
-      <animate
-        attributeName="opacity"
-        values="1;1;0.82;1;1"
-        keyTimes="0;0.92;0.935;0.95;1"
-        dur="4s"
-        repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+               values="1;1;0.8;1;1"
+               keyTimes="0;0.92;0.935;0.95;1"
+               dur="4s"
+               repeatCount="indefinite"/>
+
     </text>
 
 
-    <!-- racing glitch line -->
-    <rect
-      x="125"
-      y="66"
-      width="350"
-      height="1"
-      fill="#ff1638"
-      opacity="0">
+    <!-- Glitch line -->
 
-      <animate
-        attributeName="opacity"
-        values="0;0;0.9;0;0"
-        keyTimes="0;0.91;0.925;0.94;1"
-        dur="4s"
-        repeatCount="indefinite"/>
+    <rect x="120"
+          y="66"
+          width="360"
+          height="1"
+          fill="#ff1638"
+          opacity="0">
+
+      <animate attributeName="opacity"
+               values="0;0;1;0;0"
+               keyTimes="0;0.91;0.925;0.94;1"
+               dur="4s"
+               repeatCount="indefinite"/>
 
     </rect>
 
   </g>
 
 
-  <!-- ======================================================= -->
-  <!-- TITLE UNDERLINE -->
-  <!-- ======================================================= -->
+  <!-- ====================================================== -->
+  <!-- TITLE DIVIDER                                           -->
+  <!-- ====================================================== -->
+
+  <line x1="170"
+        y1="96"
+        x2="430"
+        y2="96"
+        stroke="#30343a"
+        stroke-width="1"/>
+
+  <line x1="170"
+        y1="96"
+        x2="240"
+        y2="96"
+        stroke="#ff1638"
+        stroke-width="2"/>
+
+
+  <!-- ====================================================== -->
+  <!-- SIDE TELEMETRY                                          -->
+  <!-- ====================================================== -->
+
+  <text x="28"
+        y="112"
+        fill="#555b62"
+        font-family="monospace"
+        font-size="6"
+        letter-spacing="1">
 
-  <line
-    x1="174"
-    y1="96"
-    x2="426"
-    y2="96"
-    stroke="#30343a"
-    stroke-width="1"/>
-
-  <line
-    x1="174"
-    y1="96"
-    x2="238"
-    y2="96"
-    stroke="#ff1638"
-    stroke-width="2"
-    filter="url(#redGlow)"/>
-
-
-  <!-- ======================================================= -->
-  <!-- F1 STEERING WHEEL -->
-  <!-- ======================================================= -->
-
-  <g clip-path="url(#wheelClip)">
-
-
-    <!-- ----------------------------------------------------- -->
-    <!-- OUTER STEERING WHEEL -->
-    <!-- ----------------------------------------------------- -->
-
-    <path
-      d="
-        M138 157
-        C137 137 151 116 176 108
-        C205 98 244 102 300 102
-        C356 102 395 98 424 108
-        C449 116 463 137 462 157
-      "
-      fill="none"
-      stroke="#2c3035"
-      stroke-width="13"
-      stroke-linecap="round"/>
-
-
-    <!-- red inner rim -->
-    <path
-      d="
-        M145 154
-        C145 137 158 121 181 113
-        C211 103 251 107 300 107
-        C349 107 389 103 419 113
-        C442 121 455 137 455 154
-      "
-      fill="none"
-      stroke="#0a0c0f"
-      stroke-width="8"
-      stroke-linecap="round"/>
-
-
-    <path
-      d="
-        M145 151
-        C145 135 160 121 182 114
-      "
-      fill="none"
-      stroke="#ff1638"
-      stroke-width="2"
-      opacity="0.8"/>
-
-
-    <path
-      d="
-        M418 114
-        C440 121 455 135 455 151
-      "
-      fill="none"
-      stroke="#ff1638"
-      stroke-width="2"
-      opacity="0.8"/>
-
-
-    <!-- ----------------------------------------------------- -->
-    <!-- LEFT HANDLE -->
-    <!-- ----------------------------------------------------- -->
-
-    <path
-      d="M144 137 L126 148 L126 164 L151 164 L163 149"
-      fill="#111419"
-      stroke="#3a3f45"
-      stroke-width="1"/>
-
-
-    <path
-      d="M126 149 L139 142"
-      stroke="#ff1638"
-      stroke-width="2"/>
-
-
-    <!-- ----------------------------------------------------- -->
-    <!-- RIGHT HANDLE -->
-    <!-- ----------------------------------------------------- -->
-
-    <path
-      d="M456 137 L474 148 L474 164 L449 164 L437 149"
-      fill="#111419"
-      stroke="#3a3f45"
-      stroke-width="1"/>
-
-
-    <path
-      d="M474 149 L461 142"
-      stroke="#ff1638"
-      stroke-width="2"/>
-
-
-    <!-- ----------------------------------------------------- -->
-    <!-- CENTRAL WHEEL BODY -->
-    <!-- ----------------------------------------------------- -->
-
-    <path
-      d="
-        M211 122
-        L237 112
-        L363 112
-        L389 122
-        L370 157
-        L230 157
-        Z"
-      fill="#0d1013"
-      stroke="#343940"
-      stroke-width="1.2"/>
-
-
-    <!-- carbon face -->
-    <path
-      d="
-        M221 124
-        L242 116
-        L358 116
-        L379 124
-        L363 153
-        L237 153
-        Z"
-      fill="url(#carbon)"/>
-
-
-    <!-- ===================================================== -->
-    <!-- REV COUNTER DISPLAY -->
-    <!-- ===================================================== -->
-
-    <rect
-      x="247"
-      y="121"
-      width="106"
-      height="29"
-      rx="3"
-      fill="#050607"
-      stroke="#262a2f"
-      stroke-width="1"/>
-
-
-    <!-- RPM value -->
-
-    <text
-      x="300"
-      y="140"
-      text-anchor="middle"
-      class="mono"
-      font-size="16"
-      font-weight="bold"
-      fill="#f4f5f6">
-
-      11,842
-
-    </text>
-
-
-    <text
-      x="300"
-      y="147"
-      text-anchor="middle"
-      class="tiny"
-      fill="#737980">
-
-      RPM
-
-    </text>
-
-
-    <!-- ===================================================== -->
-    <!-- SHIFT LIGHTS -->
-    <!-- ===================================================== -->
-
-    <g>
-
-      <!-- 1 -->
-      <rect
-        x="254"
-        y="116"
-        width="7"
-        height="3"
-        rx="1"
-        fill="#2b0a0f">
-
-        <animate
-          attributeName="fill"
-          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
-          keyTimes="0;0.15;0.30;0.40"
-          dur="2.2s"
-          repeatCount="indefinite"/>
-
-      </rect>
-
-
-      <!-- 2 -->
-      <rect
-        x="264"
-        y="116"
-        width="7"
-        height="3"
-        rx="1"
-        fill="#2b0a0f">
-
-        <animate
-          attributeName="fill"
-          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
-          keyTimes="0;0.20;0.35;0.45"
-          dur="2.2s"
-          repeatCount="indefinite"/>
-
-      </rect>
-
-
-      <!-- 3 -->
-      <rect
-        x="274"
-        y="116"
-        width="7"
-        height="3"
-        rx="1"
-        fill="#2b0a0f">
-
-        <animate
-          attributeName="fill"
-          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
-          keyTimes="0;0.25;0.40;0.50"
-          dur="2.2s"
-          repeatCount="indefinite"/>
-
-      </rect>
-
-
-      <!-- 4 -->
-      <rect
-        x="284"
-        y="116"
-        width="7"
-        height="3"
-        rx="1"
-        fill="#2b0a0f">
-
-        <animate
-          attributeName="fill"
-          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
-          keyTimes="0;0.30;0.45;0.55"
-          dur="2.2s"
-          repeatCount="indefinite"/>
-
-      </rect>
-
-
-      <!-- 5 -->
-      <rect
-        x="294"
-        y="116"
-        width="7"
-        height="3"
-        rx="1"
-        fill="#2b0a0f">
-
-        <animate
-          attributeName="fill"
-          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
-          keyTimes="0;0.35;0.50;0.60"
-          dur="2.2s"
-          repeatCount="indefinite"/>
-
-      </rect>
-
-
-      <!-- 6 -->
-      <rect
-        x="304"
-        y="116"
-        width="7"
-        height="3"
-        rx="1"
-        fill="#2b0a0f">
-
-        <animate
-          attributeName="fill"
-          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
-          keyTimes="0;0.40;0.55;0.65"
-          dur="2.2s"
-          repeatCount="indefinite"/>
-
-      </rect>
-
-
-      <!-- 7 -->
-      <rect
-        x="314"
-        y="116"
-        width="7"
-        height="3"
-        rx="1"
-        fill="#2b0a0f">
-
-        <animate
-          attributeName="fill"
-          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
-          keyTimes="0;0.45;0.60;0.70"
-          dur="2.2s"
-          repeatCount="indefinite"/>
-
-      </rect>
-
-
-      <!-- 8 -->
-      <rect
-        x="324"
-        y="116"
-        width="7"
-        height="3"
-        rx="1"
-        fill="#2b0a0f">
-
-        <animate
-          attributeName="fill"
-          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
-          keyTimes="0;0.50;0.65;0.75"
-          dur="2.2s"
-          repeatCount="indefinite"/>
-
-      </rect>
-
-
-      <!-- 9 -->
-      <rect
-        x="334"
-        y="116"
-        width="7"
-        height="3"
-        rx="1"
-        fill="#2b0a0f">
-
-        <animate
-          attributeName="fill"
-          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
-          keyTimes="0;0.55;0.70;0.80"
-          dur="2.2s"
-          repeatCount="indefinite"/>
-
-      </rect>
-
-
-      <!-- 10 -->
-      <rect
-        x="344"
-        y="116"
-        width="7"
-        height="3"
-        rx="1"
-        fill="#2b0a0f">
-
-        <animate
-          attributeName="fill"
-          values="#2b0a0f;#ff1638;#ff1638;#2b0a0f"
-          keyTimes="0;0.60;0.75;0.85"
-          dur="2.2s"
-          repeatCount="indefinite"/>
-
-      </rect>
-
-    </g>
-
-
-    <!-- ===================================================== -->
-    <!-- WHEEL BUTTONS -->
-    <!-- ===================================================== -->
-
-    <circle
-      cx="225"
-      cy="132"
-      r="4"
-      fill="#191c20"
-      stroke="#464b52"
-      stroke-width="1"/>
-
-    <circle
-      cx="375"
-      cy="132"
-      r="4"
-      fill="#191c20"
-      stroke="#464b52"
-      stroke-width="1"/>
-
-
-    <circle
-      cx="225"
-      cy="144"
-      r="4"
-      fill="#ff1638"
-      opacity="0.85"/>
-
-    <circle
-      cx="375"
-      cy="144"
-      r="4"
-      fill="#ff1638"
-      opacity="0.85"/>
-
-
-    <!-- ===================================================== -->
-    <!-- STEERING SPOKES -->
-    <!-- ===================================================== -->
-
-    <path
-      d="M247 148 L226 158"
-      stroke="#363b41"
-      stroke-width="5"/>
-
-    <path
-      d="M353 148 L374 158"
-      stroke="#363b41"
-      stroke-width="5"/>
-
-
-    <path
-      d="M300 150 V165"
-      stroke="#363b41"
-      stroke-width="5"/>
-
-
-    <!-- central lower red marker -->
-    <path
-      d="M293 157 H307 L303 164 H297 Z"
-      fill="#ff1638"/>
-
-  </g>
-
-
-  <!-- ======================================================= -->
-  <!-- STEERING WHEEL TELEMETRY -->
-  <!-- ======================================================= -->
-
-  <text
-    x="28"
-    y="116"
-    class="tiny"
-    fill="#555b62">
     LAP
+
   </text>
 
-  <text
-    x="28"
-    y="127"
-    class="small"
-    fill="#f0f1f2">
+
+  <text x="28"
+        y="124"
+        fill="#eeeeef"
+        font-family="monospace"
+        font-size="9">
+
     01
+
   </text>
 
 
-  <text
-    x="572"
-    y="116"
-    text-anchor="end"
-    class="tiny"
-    fill="#555b62">
+  <text x="572"
+        y="112"
+        text-anchor="end"
+        fill="#555b62"
+        font-family="monospace"
+        font-size="6"
+        letter-spacing="1">
+
     DELTA
+
   </text>
 
-  <text
-    x="572"
-    y="127"
-    text-anchor="end"
-    class="small"
-    fill="#ff1638">
+
+  <text x="572"
+        y="124"
+        text-anchor="end"
+        fill="#ff1638"
+        font-family="monospace"
+        font-size="9">
+
     -0.247
+
   </text>
 
 
-  <!-- ======================================================= -->
-  <!-- FULL STACK / AI LABEL -->
-  <!-- ======================================================= -->
+  <!-- ====================================================== -->
+  <!-- F1 STYLE STEERING WHEEL                                 -->
+  <!-- ====================================================== -->
+
+  <!-- outer wheel -->
+
+  <path d="M137 158
+           C137 138 151 117 177 108
+           C207 98 247 102 300 102
+           C353 102 393 98 423 108
+           C449 117 463 138 463 158"
+        fill="none"
+        stroke="#292d32"
+        stroke-width="14"
+        stroke-linecap="round"/>
+
+
+  <!-- inner wheel -->
+
+  <path d="M145 154
+           C145 137 159 122 181 114
+           C211 104 252 107 300 107
+           C348 107 389 104 419 114
+           C441 122 455 137 455 154"
+        fill="none"
+        stroke="#080a0c"
+        stroke-width="8"
+        stroke-linecap="round"/>
+
+
+  <!-- red wheel accents -->
+
+  <path d="M145 151
+           C147 135 160 122 182 114"
+        fill="none"
+        stroke="#ff1638"
+        stroke-width="2"/>
+
+
+  <path d="M418 114
+           C440 122 453 135 455 151"
+        fill="none"
+        stroke="#ff1638"
+        stroke-width="2"/>
+
+
+  <!-- ====================================================== -->
+  <!-- LEFT HANDLE                                             -->
+  <!-- ====================================================== -->
+
+  <path d="M144 137
+           L126 148
+           L126 164
+           L151 164
+           L163 149 Z"
+        fill="#111419"
+        stroke="#3a3f45"
+        stroke-width="1"/>
+
+
+  <path d="M126 149L139 142"
+        stroke="#ff1638"
+        stroke-width="2"/>
+
+
+  <!-- ====================================================== -->
+  <!-- RIGHT HANDLE                                            -->
+  <!-- ====================================================== -->
+
+  <path d="M456 137
+           L474 148
+           L474 164
+           L449 164
+           L437 149 Z"
+        fill="#111419"
+        stroke="#3a3f45"
+        stroke-width="1"/>
+
+
+  <path d="M474 149L461 142"
+        stroke="#ff1638"
+        stroke-width="2"/>
+
+
+  <!-- ====================================================== -->
+  <!-- CENTRAL WHEEL BODY                                      -->
+  <!-- ====================================================== -->
+
+  <path d="M211 122
+           L237 112
+           L363 112
+           L389 122
+           L370 157
+           L230 157 Z"
+        fill="#0c0f12"
+        stroke="#383d43"
+        stroke-width="1"/>
+
+
+  <path d="M221 124
+           L242 116
+           L358 116
+           L379 124
+           L363 153
+           L237 153 Z"
+        fill="url(#carbon)"/>
+
+
+  <!-- ====================================================== -->
+  <!-- RPM DISPLAY                                             -->
+  <!-- ====================================================== -->
+
+  <rect x="247"
+        y="121"
+        width="106"
+        height="29"
+        rx="3"
+        fill="#040506"
+        stroke="#292d32"
+        stroke-width="1"/>
+
+
+  <!-- RPM digits -->
+
+  <text x="300"
+        y="140"
+        text-anchor="middle"
+        fill="#f4f5f6"
+        font-family="monospace"
+        font-size="15"
+        font-weight="bold">
+
+    11,842
+
+  </text>
+
+
+  <text x="300"
+        y="147"
+        text-anchor="middle"
+        fill="#737980"
+        font-family="monospace"
+        font-size="6"
+        letter-spacing="1">
+
+    RPM
+
+  </text>
+
+
+  <!-- ====================================================== -->
+  <!-- REV COUNTER / SHIFT LIGHTS                              -->
+  <!-- ====================================================== -->
 
   <g>
 
-    <rect
-      x="173"
-      y="166"
-      width="254"
-      height="10"
-      rx="2"
-      fill="#0b0d10"
-      stroke="#282c31"
-      stroke-width="0.7"/>
+    <rect x="253" y="116" width="7" height="3" rx="1" fill="#33070c">
+      <animate attributeName="fill"
+               values="#33070c;#ff1638;#33070c"
+               keyTimes="0;0.18;0.38"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </rect>
 
 
-    <rect
-      x="174"
-      y="166"
-      width="3"
-      height="10"
-      fill="#ff1638"/>
+    <rect x="263" y="116" width="7" height="3" rx="1" fill="#33070c">
+      <animate attributeName="fill"
+               values="#33070c;#ff1638;#33070c"
+               keyTimes="0;0.23;0.43"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </rect>
 
 
-    <text
-      x="300"
-      y="173.2"
-      text-anchor="middle"
-      class="tiny"
-      font-size="7"
-      fill="#d8dade">
+    <rect x="273" y="116" width="7" height="3" rx="1" fill="#33070c">
+      <animate attributeName="fill"
+               values="#33070c;#ff1638;#33070c"
+               keyTimes="0;0.28;0.48"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </rect>
 
-      FULL-STACK DEVELOPMENT // AI SYSTEMS
 
-    </text>
+    <rect x="283" y="116" width="7" height="3" rx="1" fill="#33070c">
+      <animate attributeName="fill"
+               values="#33070c;#ff1638;#33070c"
+               keyTimes="0;0.33;0.53"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </rect>
+
+
+    <rect x="293" y="116" width="7" height="3" rx="1" fill="#33070c">
+      <animate attributeName="fill"
+               values="#33070c;#ff1638;#33070c"
+               keyTimes="0;0.38;0.58"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </rect>
+
+
+    <rect x="303" y="116" width="7" height="3" rx="1" fill="#33070c">
+      <animate attributeName="fill"
+               values="#33070c;#ff1638;#33070c"
+               keyTimes="0;0.43;0.63"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </rect>
+
+
+    <rect x="313" y="116" width="7" height="3" rx="1" fill="#33070c">
+      <animate attributeName="fill"
+               values="#33070c;#ff1638;#33070c"
+               keyTimes="0;0.48;0.68"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </rect>
+
+
+    <rect x="323" y="116" width="7" height="3" rx="1" fill="#33070c">
+      <animate attributeName="fill"
+               values="#33070c;#ff1638;#33070c"
+               keyTimes="0;0.53;0.73"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </rect>
+
+
+    <rect x="333" y="116" width="7" height="3" rx="1" fill="#33070c">
+      <animate attributeName="fill"
+               values="#33070c;#ff1638;#33070c"
+               keyTimes="0;0.58;0.78"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </rect>
+
+
+    <rect x="343" y="116" width="7" height="3" rx="1" fill="#33070c">
+      <animate attributeName="fill"
+               values="#33070c;#ff1638;#33070c"
+               keyTimes="0;0.63;0.83"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </rect>
 
   </g>
 
 
-  <!-- ======================================================= -->
-  <!-- OUTER FRAME -->
-  <!-- ======================================================= -->
+  <!-- ====================================================== -->
+  <!-- WHEEL BUTTONS                                           -->
+  <!-- ====================================================== -->
 
-  <rect
-    x="9"
-    y="9"
-    width="582"
-    height="162"
-    rx="9"
-    fill="none"
-    stroke="#2c3035"
-    stroke-width="1"/>
+  <circle cx="225"
+          cy="132"
+          r="4"
+          fill="#171a1e"
+          stroke="#464b52"/>
 
 
-  <!-- ======================================================= -->
-  <!-- PREMIUM CORNER ACCENTS -->
-  <!-- ======================================================= -->
-
-  <path
-    d="M10 39 V10 H58"
-    fill="none"
-    stroke="#ff1638"
-    stroke-width="2.5"/>
-
-  <path
-    d="M590 39 V10 H542"
-    fill="none"
-    stroke="#ff1638"
-    stroke-width="2.5"/>
-
-  <path
-    d="M10 141 V170 H58"
-    fill="none"
-    stroke="#ff1638"
-    stroke-width="2.5"/>
-
-  <path
-    d="M590 141 V170 H542"
-    fill="none"
-    stroke="#ff1638"
-    stroke-width="2.5"/>
+  <circle cx="375"
+          cy="132"
+          r="4"
+          fill="#171a1e"
+          stroke="#464b52"/>
 
 
-  <!-- ======================================================= -->
-  <!-- MOVING HORIZONTAL SCAN -->
-  <!-- ======================================================= -->
+  <circle cx="225"
+          cy="144"
+          r="4"
+          fill="#ff1638"/>
 
-  <rect
-    x="10"
-    y="39"
-    width="580"
-    height="1"
-    fill="#ff1638"
-    opacity="0.18">
 
-    <animate
-      attributeName="y"
-      values="39;158;39"
-      dur="5s"
-      repeatCount="indefinite"/>
+  <circle cx="375"
+          cy="144"
+          r="4"
+          fill="#ff1638"/>
+
+
+  <!-- ====================================================== -->
+  <!-- WHEEL SPOKES                                            -->
+  <!-- ====================================================== -->
+
+  <path d="M247 148L226 158"
+        stroke="#383d43"
+        stroke-width="5"/>
+
+
+  <path d="M353 148L374 158"
+        stroke="#383d43"
+        stroke-width="5"/>
+
+
+  <path d="M300 150V165"
+        stroke="#383d43"
+        stroke-width="5"/>
+
+
+  <!-- center marker -->
+
+  <path d="M293 157H307L303 164H297Z"
+        fill="#ff1638"/>
+
+
+  <!-- ====================================================== -->
+  <!-- FULL STACK / AI                                         -->
+  <!-- ====================================================== -->
+
+  <rect x="170"
+        y="166"
+        width="260"
+        height="10"
+        rx="2"
+        fill="#0b0d10"
+        stroke="#292d32"
+        stroke-width="1"/>
+
+
+  <rect x="171"
+        y="166"
+        width="3"
+        height="10"
+        fill="#ff1638"/>
+
+
+  <text x="300"
+        y="173.2"
+        text-anchor="middle"
+        fill="#d8dade"
+        font-family="monospace"
+        font-size="6.5"
+        letter-spacing="1">
+
+    FULL-STACK DEVELOPMENT // AI SYSTEMS
+
+  </text>
+
+
+  <!-- ====================================================== -->
+  <!-- MOVING SCAN LINE                                       -->
+  <!-- ====================================================== -->
+
+  <rect x="10"
+        y="40"
+        width="580"
+        height="1"
+        fill="#ff1638"
+        opacity="0.18">
+
+    <animate attributeName="y"
+             values="40;158;40"
+             dur="5s"
+             repeatCount="indefinite"/>
 
   </rect>
 
 
-  <!-- ======================================================= -->
-  <!-- SUBTLE SCANLINES -->
-  <!-- ======================================================= -->
+  <!-- ====================================================== -->
+  <!-- OUTER FRAME                                            -->
+  <!-- ====================================================== -->
 
-  <g
-    opacity="0.025"
-    pointer-events="none">
+  <rect x="9"
+        y="9"
+        width="582"
+        height="162"
+        rx="9"
+        fill="none"
+        stroke="#2d3238"
+        stroke-width="1"/>
 
-    <path
-      d="M10 45 H590 M10 49 H590 M10 53 H590
-         M10 57 H590 M10 61 H590 M10 65 H590
-         M10 69 H590 M10 73 H590 M10 77 H590
-         M10 81 H590 M10 85 H590 M10 89 H590
-         M10 93 H590 M10 97 H590 M10 101 H590
-         M10 105 H590 M10 109 H590 M10 113 H590
-         M10 117 H590 M10 121 H590 M10 125 H590
-         M10 129 H590 M10 133 H590 M10 137 H590
-         M10 141 H590 M10 145 H590 M10 149 H590
-         M10 153 H590 M10 157 H590"
+
+  <!-- ====================================================== -->
+  <!-- RED CORNERS                                             -->
+  <!-- ====================================================== -->
+
+  <path d="M10 39V10H58"
+        fill="none"
+        stroke="#ff1638"
+        stroke-width="2.5"/>
+
+
+  <path d="M590 39V10H542"
+        fill="none"
+        stroke="#ff1638"
+        stroke-width="2.5"/>
+
+
+  <path d="M10 141V170H58"
+        fill="none"
+        stroke="#ff1638"
+        stroke-width="2.5"/>
+
+
+  <path d="M590 141V170H542"
+        fill="none"
+        stroke="#ff1638"
+        stroke-width="2.5"/>
+
+
+  <!-- ====================================================== -->
+  <!-- SUBTLE SCANLINES                                       -->
+  <!-- ====================================================== -->
+
+  <g opacity="0.025">
+
+    <path d="
+      M10 45H590
+      M10 49H590
+      M10 53H590
+      M10 57H590
+      M10 61H590
+      M10 65H590
+      M10 69H590
+      M10 73H590
+      M10 77H590
+      M10 81H590
+      M10 85H590
+      M10 89H590
+      M10 93H590
+      M10 97H590
+      M10 101H590
+      M10 105H590
+      M10 109H590
+      M10 113H590
+      M10 117H590
+      M10 121H590
+      M10 125H590
+      M10 129H590
+      M10 133H590
+      M10 137H590
+      M10 141H590
+      M10 145H590
+      M10 149H590
+      M10 153H590
+      M10 157H590"
       stroke="#ffffff"
       stroke-width="1"/>
 
